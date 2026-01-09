@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberZ | Industry-Specific Cybersecurity Resources</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cyan: #00f0ff;
+      --cyan-glow: rgba(0, 240, 255, 0.4);
+      --cyan-dim: rgba(0, 240, 255, 0.1);
+      --dark-bg: #0a0a0f;
+      --card-bg: #12121a;
+      --card-border: #1a1a25;
+      --text-primary: #ffffff;
+      --text-secondary: #8a8a9a;
+      --green: #00ff88;
+      --red: #ff3366;
+      --purple: #8b5cf6;
+      --orange: #ff8800;
+      --pink: #ff0080;
+      --blue: #0088ff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Rajdhani', sans-serif;
+      background: var(--dark-bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Animated background grid */
+    .bg-grid {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+      background-size: 50px 50px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .bg-glow {
+      position: fixed;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      filter: blur(150px);
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .bg-glow-1 {
+      background: var(--cyan);
+      top: -200px;
+      right: -200px;
+      animation: float 20s ease-in-out infinite;
+    }
+
+    .bg-glow-2 {
+      background: var(--purple);
+      bottom: -200px;
+      left: -200px;
+      animation: float 25s ease-in-out infinite reverse;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(50px, 50px); }
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 1rem 2rem;
+      background: rgba(10, 10, 15, 0.8);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .nav-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--cyan);
+      text-decoration: none;
+      letter-spacing: 2px;
+      text-shadow: 0 0 20px var(--cyan-glow);
+    }
+
+    .logo span {
+      color: var(--text-primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .nav-links a:hover {
+      color: var(--cyan);
+      text-shadow: 0 0 10px var(--cyan-glow);
+    }
+
+    .nav-cta {
+      background: transparent;
+      border: 1px solid var(--cyan);
+      color: var(--cyan);
+      padding: 0.6rem 1.5rem;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .nav-cta:hover {
+      background: var(--cyan);
+      color: var(--dark-bg);
+      box-shadow: 0 0 30px var(--cyan-glow);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 8rem 2rem 4rem;
+      z-index: 1;
+    }
+
+    .hero-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--cyan-dim);
+      border: 1px solid rgba(0, 240, 255, 0.2);
+      padding: 0.5rem 1rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--cyan);
+      margin-bottom: 2rem;
+      animation: fadeInUp 0.8s ease;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: var(--cyan);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .hero h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      animation: fadeInUp 0.8s ease 0.1s both;
+    }
+
+    .hero h1 .highlight {
+      color: var(--cyan);
+      text-shadow: 0 0 40px var(--cyan-glow);
+    }
+
+    .hero-subtitle {
+      font-size: 1.4rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin-bottom: 2.5rem;
+      animation: fadeInUp 0.8s ease 0.2s both;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      animation: fadeInUp 0.8s ease 0.3s both;
+    }
+
+    .btn-primary {
+      background: var(--cyan);
+      color: var(--dark-bg);
+      border: none;
+      padding: 1rem 2.5rem;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 40px var(--cyan-glow);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-primary);
+      border: 1px solid var(--card-border);
+      padding: 1rem 2.5rem;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 3rem;
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--card-border);
+      animation: fadeInUp 0.8s ease 0.4s both;
+    }
+
+    .stat {
+      text-align: left;
+    }
+
+    .stat-number {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--cyan);
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Industries Section */
+    .industries {
+      position: relative;
+      padding: 6rem 2rem;
+      z-index: 1;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 4rem;
+    }
+
+    .section-tag {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+    }
+
+    .industries-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 1.5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .industry-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 2rem;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .industry-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--accent-color);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+
+    .industry-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .industry-card:hover {
+      border-color: var(--accent-color);
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .industry-icon {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--card-border);
+    }
+
+    .industry-card[data-industry="healthcare"] { --accent-color: var(--green); }
+    .industry-card[data-industry="accounting"] { --accent-color: var(--blue); }
+    .industry-card[data-industry="legal"] { --accent-color: var(--purple); }
+    .industry-card[data-industry="realestate"] { --accent-color: var(--orange); }
+    .industry-card[data-industry="saas"] { --accent-color: var(--pink); }
+    .industry-card[data-industry="cloud"] { --accent-color: var(--cyan); }
+
+    .industry-name {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--accent-color);
+    }
+
+    .industry-desc {
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+
+    .industry-topics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .topic-tag {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      padding: 0.3rem 0.6rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--card-border);
+      color: var(--text-secondary);
+    }
+
+    .industry-count {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--accent-color);
+    }
+
+    .industry-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-top: 1rem;
+      transition: gap 0.3s ease;
+    }
+
+    .industry-cta:hover {
+      gap: 1rem;
+    }
+
+    /* What's Included Section */
+    .included {
+      position: relative;
+      padding: 6rem 2rem;
+      z-index: 1;
+      background: linear-gradient(180deg, transparent, rgba(0, 240, 255, 0.02), transparent);
+    }
+
+    .included-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .included-item {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .included-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      border: 1px solid var(--cyan);
+      position: relative;
+    }
+
+    .included-icon::before {
+      content: '';
+      position: absolute;
+      inset: -5px;
+      border: 1px solid rgba(0, 240, 255, 0.2);
+    }
+
+    .included-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .included-desc {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    /* Books Section */
+    .books {
+      position: relative;
+      padding: 6rem 2rem;
+      z-index: 1;
+      background: linear-gradient(180deg, transparent, rgba(139, 92, 246, 0.03), transparent);
+    }
+
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .book-card {
+      display: flex;
+      gap: 1.5rem;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .book-card:hover {
+      border-color: var(--purple);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(139, 92, 246, 0.15);
+    }
+
+    .book-cover {
+      position: relative;
+      width: 80px;
+      height: 120px;
+      flex-shrink: 0;
+      perspective: 500px;
+    }
+
+    .book-spine {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 8px;
+      height: 100%;
+      background: linear-gradient(135deg, var(--purple), var(--cyan));
+      transform: rotateY(-30deg);
+      transform-origin: left;
+    }
+
+    .book-front {
+      position: absolute;
+      left: 8px;
+      top: 0;
+      width: 72px;
+      height: 100%;
+      background: linear-gradient(135deg, #1a1a2e, #16162a);
+      border: 1px solid var(--card-border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .book-emoji {
+      font-size: 2rem;
+    }
+
+    .book-badge {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.55rem;
+      background: var(--purple);
+      color: white;
+      padding: 0.2rem 0.4rem;
+      text-transform: uppercase;
+    }
+
+    .book-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .book-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .book-desc {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      flex: 1;
+    }
+
+    .book-pricing {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .book-price {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.9rem;
+      color: var(--cyan);
+    }
+
+    .book-price small {
+      color: var(--text-secondary);
+      font-size: 0.7rem;
+    }
+
+    .book-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--purple);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: gap 0.3s ease;
+    }
+
+    .book-cta:hover {
+      gap: 0.8rem;
+    }
+
+    /* Testimonial Section */
+    .testimonial {
+      position: relative;
+      padding: 6rem 2rem;
+      z-index: 1;
+    }
+
+    .testimonial-card {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 3rem;
+      position: relative;
+    }
+
+    .testimonial-card::before {
+      content: '"';
+      font-family: 'Orbitron', sans-serif;
+      font-size: 8rem;
+      color: var(--cyan);
+      opacity: 0.1;
+      position: absolute;
+      top: -20px;
+      left: 20px;
+      line-height: 1;
+    }
+
+    .testimonial-text {
+      font-size: 1.4rem;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, var(--cyan), var(--purple));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+    }
+
+    .author-info h4 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .author-info p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      position: relative;
+      padding: 8rem 2rem;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .cta-box {
+      max-width: 800px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, rgba(0, 240, 255, 0.1), rgba(139, 92, 246, 0.1));
+      border: 1px solid rgba(0, 240, 255, 0.2);
+      padding: 4rem;
+      position: relative;
+    }
+
+    .cta-box::before,
+    .cta-box::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border: 2px solid var(--cyan);
+    }
+
+    .cta-box::before {
+      top: -2px;
+      left: -2px;
+      border-right: none;
+      border-bottom: none;
+    }
+
+    .cta-box::after {
+      bottom: -2px;
+      right: -2px;
+      border-left: none;
+      border-top: none;
+    }
+
+    .cta-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .cta-subtitle {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+
+    /* Footer */
+    footer {
+      position: relative;
+      padding: 4rem 2rem 2rem;
+      border-top: 1px solid var(--card-border);
+      z-index: 1;
+    }
+
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .footer-logo {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--cyan);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--cyan);
+    }
+
+    .footer-copy {
+      width: 100%;
+      text-align: center;
+      padding-top: 2rem;
+      margin-top: 2rem;
+      border-top: 1px solid var(--card-border);
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+    }
+
+    /* Terminal animation in hero */
+    .terminal {
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 450px;
+      background: rgba(18, 18, 26, 0.9);
+      border: 1px solid var(--card-border);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.85rem;
+      display: none;
+    }
+
+    @media (min-width: 1200px) {
+      .terminal {
+        display: block;
+      }
+    }
+
+    .terminal-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1rem;
+      background: rgba(0, 0, 0, 0.3);
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .terminal-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .terminal-dot:nth-child(1) { background: var(--red); }
+    .terminal-dot:nth-child(2) { background: #ffcc00; }
+    .terminal-dot:nth-child(3) { background: var(--green); }
+
+    .terminal-body {
+      padding: 1.5rem;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .terminal-line {
+      margin-bottom: 0.5rem;
+      opacity: 0;
+      animation: typeLine 0.3s ease forwards;
+    }
+
+    .terminal-line:nth-child(1) { animation-delay: 0.5s; }
+    .terminal-line:nth-child(2) { animation-delay: 1s; }
+    .terminal-line:nth-child(3) { animation-delay: 1.5s; }
+    .terminal-line:nth-child(4) { animation-delay: 2s; }
+    .terminal-line:nth-child(5) { animation-delay: 2.5s; }
+    .terminal-line:nth-child(6) { animation-delay: 3s; }
+    .terminal-line:nth-child(7) { animation-delay: 3.5s; }
+    .terminal-line:nth-child(8) { animation-delay: 4s; }
+
+    @keyframes typeLine {
+      from { opacity: 0; transform: translateX(-10px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .terminal-prompt {
+      color: var(--green);
+    }
+
+    .terminal-cmd {
+      color: var(--cyan);
+    }
+
+    .terminal-output {
+      color: var(--text-secondary);
+    }
+
+    .terminal-success {
+      color: var(--green);
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      height: 18px;
+      background: var(--cyan);
+      animation: blink 1s step-end infinite;
+      vertical-align: text-bottom;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .industries-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-box {
+        padding: 2rem;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    /* Smooth scroll offset for fixed nav */
+    section[id] {
+      scroll-margin-top: 80px;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <nav>
+    <div class="nav-content">
+      <a href="#" class="logo">CYBER<span>Z</span></a>
+      <ul class="nav-links">
+        <li><a href="#industries">Industries</a></li>
+        <li><a href="#books">Books</a></li>
+        <li><a href="#included">What's Included</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-cta">Get Started</button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span>Trusted by 500+ Organizations</span>
+      </div>
+      <h1>
+        PROTECT YOUR<br>
+        <span class="highlight">INDUSTRY</span>
+      </h1>
+      <p class="hero-subtitle">
+        Ready-to-deploy cybersecurity resources, policies, and training materials 
+        built specifically for your industry's unique threats and compliance requirements.
+      </p>
+      <div class="hero-buttons">
+        <a href="#industries" class="btn-primary">
+          Browse Bundles
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="#included" class="btn-secondary">See What's Included</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-number">100+</div>
+          <div class="stat-label">Security Documents</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">6</div>
+          <div class="stat-label">Industry Bundles</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">5</div>
+          <div class="stat-label">Published Books</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="terminal">
+      <div class="terminal-header">
+        <div class="terminal-dot"></div>
+        <div class="terminal-dot"></div>
+        <div class="terminal-dot"></div>
+      </div>
+      <div class="terminal-body">
+        <div class="terminal-line">
+          <span class="terminal-prompt">cyberz@secure:~$</span> <span class="terminal-cmd">scan --industry healthcare</span>
+        </div>
+        <div class="terminal-line">
+          <span class="terminal-output">[*] Analyzing compliance requirements...</span>
+        </div>
+        <div class="terminal-line">
+          <span class="terminal-output">[*] Checking HIPAA Security Rule 2026...</span>
+        </div>
+        <div class="terminal-line">
+          <span class="terminal-success">[✓] 20 security policies generated</span>
+        </div>
+        <div class="terminal-line">
+          <span class="terminal-success">[✓] Breach response templates ready</span>
+        </div>
+        <div class="terminal-line">
+          <span class="terminal-success">[✓] Staff training materials compiled</span>
+        </div>
+        <div class="terminal-line">
+          <span class="terminal-output">&nbsp;</span>
+        </div>
+        <div class="terminal-line">
+          <span class="terminal-prompt">cyberz@secure:~$</span> <span class="cursor"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="industries" id="industries">
+    <div class="section-header">
+      <div class="section-tag">// Industry Solutions</div>
+      <h2 class="section-title">Security Bundles Built for Your Sector</h2>
+      <p class="section-subtitle">
+        Each bundle contains 20+ professionally crafted documents addressing 
+        your industry's specific threats, regulations, and best practices.
+      </p>
+    </div>
+
+    <div class="industries-grid">
+      <div class="industry-card" data-industry="healthcare">
+        <div class="industry-icon">🏥</div>
+        <h3 class="industry-name">Healthcare</h3>
+        <p class="industry-desc">
+          HIPAA-compliant security resources for medical practices, clinics, and healthcare organizations.
+        </p>
+        <div class="industry-topics">
+          <span class="topic-tag">HIPAA 2026</span>
+          <span class="topic-tag">Ransomware</span>
+          <span class="topic-tag">Telehealth</span>
+          <span class="topic-tag">Medical Devices</span>
+          <span class="topic-tag">PHI Protection</span>
+        </div>
+        <div class="industry-count">20+ Documents</div>
+        <a href="#" class="industry-cta">
+          View Bundle 
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="industry-card" data-industry="accounting">
+        <div class="industry-icon">📊</div>
+        <h3 class="industry-name">Accounting</h3>
+        <p class="industry-desc">
+          FTC Safeguards Rule compliant resources for accounting firms and financial professionals.
+        </p>
+        <div class="industry-topics">
+          <span class="topic-tag">FTC Safeguards</span>
+          <span class="topic-tag">Client Data</span>
+          <span class="topic-tag">Email Security</span>
+          <span class="topic-tag">Vendor Risk</span>
+          <span class="topic-tag">MFA Setup</span>
+        </div>
+        <div class="industry-count">20+ Documents</div>
+        <a href="#" class="industry-cta">
+          View Bundle 
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="industry-card" data-industry="legal">
+        <div class="industry-icon">⚖️</div>
+        <h3 class="industry-name">Legal</h3>
+        <p class="industry-desc">
+          ABA-aligned cybersecurity resources for law firms protecting client confidentiality.
+        </p>
+        <div class="industry-topics">
+          <span class="topic-tag">Wire Fraud</span>
+          <span class="topic-tag">BEC Attacks</span>
+          <span class="topic-tag">ABA Ethics</span>
+          <span class="topic-tag">Client Portals</span>
+          <span class="topic-tag">Data Breach</span>
+        </div>
+        <div class="industry-count">20+ Documents</div>
+        <a href="#" class="industry-cta">
+          View Bundle 
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="industry-card" data-industry="realestate">
+        <div class="industry-icon">🏠</div>
+        <h3 class="industry-name">Real Estate</h3>
+        <p class="industry-desc">
+          Security resources for agents, brokers, and title companies protecting transactions.
+        </p>
+        <div class="industry-topics">
+          <span class="topic-tag">Wire Fraud</span>
+          <span class="topic-tag">Closing Day</span>
+          <span class="topic-tag">MLS Security</span>
+          <span class="topic-tag">Open Houses</span>
+          <span class="topic-tag">BEC Defense</span>
+        </div>
+        <div class="industry-count">20+ Documents</div>
+        <a href="#" class="industry-cta">
+          View Bundle 
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="industry-card" data-industry="saas">
+        <div class="industry-icon">💻</div>
+        <h3 class="industry-name">SaaS</h3>
+        <p class="industry-desc">
+          Security documentation for software companies building customer trust and achieving compliance.
+        </p>
+        <div class="industry-topics">
+          <span class="topic-tag">SOC 2</span>
+          <span class="topic-tag">API Security</span>
+          <span class="topic-tag">Incident Response</span>
+          <span class="topic-tag">Secure Dev</span>
+          <span class="topic-tag">Customer Data</span>
+        </div>
+        <div class="industry-count">20+ Documents</div>
+        <a href="#" class="industry-cta">
+          View Bundle 
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="industry-card" data-industry="cloud">
+        <div class="industry-icon">☁️</div>
+        <h3 class="industry-name">Cloud / AWS</h3>
+        <p class="industry-desc">
+          Comprehensive AWS security toolkit for startups and growing tech companies.
+        </p>
+        <div class="industry-topics">
+          <span class="topic-tag">IAM Guide</span>
+          <span class="topic-tag">Cost Control</span>
+          <span class="topic-tag">Compliance</span>
+          <span class="topic-tag">Kubernetes</span>
+          <span class="topic-tag">Disaster Recovery</span>
+        </div>
+        <div class="industry-count">17+ Guides</div>
+        <a href="#" class="industry-cta">
+          View Bundle 
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="books" id="books">
+    <div class="section-header">
+      <div class="section-tag">// Published Works</div>
+      <h2 class="section-title">The Practical Cybersecurity Series</h2>
+      <p class="section-subtitle">
+        In-depth guides available on Amazon Kindle and Paperback. Written by Lennan Carver.
+      </p>
+    </div>
+
+    <div class="books-grid">
+      <div class="book-card">
+        <div class="book-cover">
+          <div class="book-spine"></div>
+          <div class="book-front">
+            <span class="book-emoji">👨‍👩‍👧‍👦</span>
+            <span class="book-badge">Family Safety</span>
+          </div>
+        </div>
+        <div class="book-info">
+          <h3 class="book-title">Raising Safe Kids in a Deepfake World</h3>
+          <p class="book-desc">Honest advice for families navigating deepfakes & online risks</p>
+          <div class="book-pricing">
+            <span class="book-price">$9.99 <small>Kindle</small></span>
+          </div>
+          <a href="https://www.amazon.com/dp/B0G2T88GLM" target="_blank" class="book-cta">
+            View on Amazon
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">
+          <div class="book-spine"></div>
+          <div class="book-front">
+            <span class="book-emoji">🤖</span>
+            <span class="book-badge">Parent Guide</span>
+          </div>
+        </div>
+        <div class="book-info">
+          <h3 class="book-title">AI Predators & Your Child</h3>
+          <p class="book-desc">Every parent's recognition & response handbook</p>
+          <div class="book-pricing">
+            <span class="book-price">$6.99 <small>Kindle</small></span>
+            <span class="book-price">$14.99 <small>Paperback</small></span>
+          </div>
+          <a href="https://www.amazon.com/dp/B0GCGCKMJ8" target="_blank" class="book-cta">
+            View on Amazon
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">
+          <div class="book-spine"></div>
+          <div class="book-front">
+            <span class="book-emoji">🛡️</span>
+            <span class="book-badge">Defense</span>
+          </div>
+        </div>
+        <div class="book-info">
+          <h3 class="book-title">CMMC 2.0 Compliance Survival Guide</h3>
+          <p class="book-desc">For small defense contractors navigating compliance</p>
+          <div class="book-pricing">
+            <span class="book-price">$9.99 <small>Kindle</small></span>
+            <span class="book-price">$29.99 <small>Paperback</small></span>
+          </div>
+          <a href="https://www.amazon.com/dp/B0GCB21GDT" target="_blank" class="book-cta">
+            View on Amazon
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">
+          <div class="book-spine"></div>
+          <div class="book-front">
+            <span class="book-emoji">🚗</span>
+            <span class="book-badge">Auto Industry</span>
+          </div>
+        </div>
+        <div class="book-info">
+          <h3 class="book-title">Auto Dealership Cybersecurity</h3>
+          <p class="book-desc">FTC Safeguards Rule compliance for dealerships</p>
+          <div class="book-pricing">
+            <span class="book-price">$9.99 <small>Kindle</small></span>
+          </div>
+          <a href="https://www.amazon.com/dp/B0G87LXZ4H" target="_blank" class="book-cta">
+            View on Amazon
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">
+          <div class="book-spine"></div>
+          <div class="book-front">
+            <span class="book-emoji">🏗️</span>
+            <span class="book-badge">Construction</span>
+          </div>
+        </div>
+        <div class="book-info">
+          <h3 class="book-title">Construction Industry Cybersecurity Survival Guide</h3>
+          <p class="book-desc">Protect your projects, win federal contracts, stop ransomware</p>
+          <div class="book-pricing">
+            <span class="book-price">$9.99 <small>Kindle</small></span>
+          </div>
+          <a href="https://www.amazon.com/dp/B0G6BH2M38" target="_blank" class="book-cta">
+            View on Amazon
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="included" id="included">
+    <div class="section-header">
+      <div class="section-tag">// What's Included</div>
+      <h2 class="section-title">Everything You Need to Secure Your Business</h2>
+      <p class="section-subtitle">
+        Each bundle is a complete security program ready for immediate deployment.
+      </p>
+    </div>
+
+    <div class="included-grid">
+      <div class="included-item">
+        <div class="included-icon">📋</div>
+        <h3 class="included-title">Policy Templates</h3>
+        <p class="included-desc">Ready-to-customize security policies that meet industry regulations and best practices.</p>
+      </div>
+      <div class="included-item">
+        <div class="included-icon">🚨</div>
+        <h3 class="included-title">Incident Response</h3>
+        <p class="included-desc">Step-by-step breach response plans and checklists for various attack scenarios.</p>
+      </div>
+      <div class="included-item">
+        <div class="included-icon">🎓</div>
+        <h3 class="included-title">Training Materials</h3>
+        <p class="included-desc">Staff security awareness content and phishing defense training resources.</p>
+      </div>
+      <div class="included-item">
+        <div class="included-icon">✅</div>
+        <h3 class="included-title">Compliance Checklists</h3>
+        <p class="included-desc">Audit-ready checklists aligned with your industry's regulatory requirements.</p>
+      </div>
+      <div class="included-item">
+        <div class="included-icon">🤝</div>
+        <h3 class="included-title">Vendor Assessments</h3>
+        <p class="included-desc">Third-party risk questionnaires and BAA templates for vendor management.</p>
+      </div>
+      <div class="included-item">
+        <div class="included-icon">📧</div>
+        <h3 class="included-title">Client Communications</h3>
+        <p class="included-desc">Pre-written notifications, briefings, and security update templates.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonial" id="about">
+    <div class="section-header">
+      <div class="section-tag">// Trusted By Professionals</div>
+      <h2 class="section-title">What Our Customers Say</h2>
+    </div>
+
+    <div class="testimonial-card">
+      <p class="testimonial-text">
+        "CyberZ's healthcare bundle saved us months of work. We were able to pass our HIPAA audit 
+        with flying colors, and the incident response templates gave us confidence that we're 
+        prepared for anything. Worth every penny."
+      </p>
+      <div class="testimonial-author">
+        <div class="author-avatar">DR</div>
+        <div class="author-info">
+          <h4>Dr. Rebecca Chen</h4>
+          <p>Practice Administrator, Northside Medical Group</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section" id="contact">
+    <div class="cta-box">
+      <h2 class="cta-title">Ready to Secure Your Business?</h2>
+      <p class="cta-subtitle">
+        Get instant access to industry-specific security resources. 
+        No consultants, no waiting—just the tools you need.
+      </p>
+      <a href="#industries" class="btn-primary">
+        Choose Your Industry
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">CYBERZ</div>
+      <ul class="footer-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 CyberZ. All rights reserved. Protecting businesses, one bundle at a time.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth reveal on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.industry-card, .included-item, .book-card').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+
+    // Nav background on scroll
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 50) {
+        nav.style.background = 'rgba(10, 10, 15, 0.95)';
+      } else {
+        nav.style.background = 'rgba(10, 10, 15, 0.8)';
+      }
+    });
+  </script>
+</body>
+</html>
