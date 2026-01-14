@@ -110,17 +110,7 @@
     }
 
     .logo {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--cyan);
-      text-decoration: none;
-      letter-spacing: 2px;
-      text-shadow: 0 0 20px var(--cyan-glow);
-    }
-
-    .logo span {
-      color: var(--text-primary);
+      height: 40px;
     }
 
     .nav-links {
@@ -156,12 +146,31 @@
       letter-spacing: 1px;
       cursor: pointer;
       transition: all 0.3s ease;
+      text-decoration: none;
     }
 
     .nav-cta:hover {
       background: var(--cyan);
       color: var(--dark-bg);
       box-shadow: 0 0 30px var(--cyan-glow);
+    }
+
+    /* Mobile Menu */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .mobile-menu-btn span {
+      display: block;
+      width: 25px;
+      height: 2px;
+      background: var(--cyan);
+      margin: 5px 0;
+      transition: 0.3s;
     }
 
     /* Hero Section */
@@ -398,7 +407,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2rem;
       margin-bottom: 1.5rem;
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid var(--card-border);
@@ -491,7 +499,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2.5rem;
       border: 1px solid var(--cyan);
       position: relative;
     }
@@ -580,8 +587,10 @@
       gap: 0.5rem;
     }
 
-    .book-emoji {
-      font-size: 2rem;
+    .book-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .book-badge {
@@ -782,10 +791,7 @@
     }
 
     .footer-logo {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--cyan);
+      height: 30px;
     }
 
     .footer-links {
@@ -911,7 +917,28 @@
 
     /* Responsive */
     @media (max-width: 768px) {
+      .mobile-menu-btn {
+        display: block;
+      }
+
       .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(10, 10, 15, 0.98);
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+        border-bottom: 1px solid var(--card-border);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-cta {
         display: none;
       }
 
@@ -947,15 +974,23 @@
 
   <nav>
     <div class="nav-content">
-      <a href="#" class="logo">CYBER<span>Z</span></a>
-      <ul class="nav-links">
-        <li><a href="#industries">Industries</a></li>
+      <a href="index.html">
+        <img src="logo.png" alt="CyberZ" class="logo">
+      </a>
+      <button class="mobile-menu-btn" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#industries">Bundles</a></li>
         <li><a href="#books">Books</a></li>
-        <li><a href="#included">What's Included</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-      <button class="nav-cta">Get Started</button>
+      <a href="#industries" class="nav-cta">Get Started</a>
     </div>
   </nav>
 
@@ -1044,7 +1079,9 @@
 
     <div class="industries-grid">
       <div class="industry-card" data-industry="healthcare">
-        <div class="industry-icon">🏥</div>
+        <div class="industry-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+        </div>
         <h3 class="industry-name">Healthcare</h3>
         <p class="industry-desc">
           HIPAA-compliant security resources for medical practices, clinics, and healthcare organizations.
@@ -1066,7 +1103,9 @@
       </div>
 
       <div class="industry-card" data-industry="accounting">
-        <div class="industry-icon">📊</div>
+        <div class="industry-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        </div>
         <h3 class="industry-name">Accounting</h3>
         <p class="industry-desc">
           FTC Safeguards Rule compliant resources for accounting firms and financial professionals.
@@ -1088,7 +1127,9 @@
       </div>
 
       <div class="industry-card" data-industry="legal">
-        <div class="industry-icon">⚖️</div>
+        <div class="industry-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+        </div>
         <h3 class="industry-name">Legal</h3>
         <p class="industry-desc">
           ABA-aligned cybersecurity resources for law firms protecting client confidentiality.
@@ -1110,7 +1151,9 @@
       </div>
 
       <div class="industry-card" data-industry="realestate">
-        <div class="industry-icon">🏠</div>
+        <div class="industry-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        </div>
         <h3 class="industry-name">Real Estate</h3>
         <p class="industry-desc">
           Security resources for agents, brokers, and title companies protecting transactions.
@@ -1132,7 +1175,9 @@
       </div>
 
       <div class="industry-card" data-industry="saas">
-        <div class="industry-icon">💻</div>
+        <div class="industry-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+        </div>
         <h3 class="industry-name">SaaS</h3>
         <p class="industry-desc">
           Security documentation for software companies building customer trust and achieving compliance.
@@ -1154,7 +1199,9 @@
       </div>
 
       <div class="industry-card" data-industry="cloud">
-        <div class="industry-icon">☁️</div>
+        <div class="industry-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+        </div>
         <h3 class="industry-name">Cloud / AWS</h3>
         <p class="industry-desc">
           Comprehensive AWS security toolkit for startups and growing tech companies.
@@ -1191,7 +1238,7 @@
         <div class="book-cover">
           <div class="book-spine"></div>
           <div class="book-front">
-            <span class="book-emoji">👨‍👩‍👧‍👦</span>
+            <span class="book-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
             <span class="book-badge">Family Safety</span>
           </div>
         </div>
@@ -1214,7 +1261,7 @@
         <div class="book-cover">
           <div class="book-spine"></div>
           <div class="book-front">
-            <span class="book-emoji">🤖</span>
+            <span class="book-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></span>
             <span class="book-badge">Parent Guide</span>
           </div>
         </div>
@@ -1238,7 +1285,7 @@
         <div class="book-cover">
           <div class="book-spine"></div>
           <div class="book-front">
-            <span class="book-emoji">🛡️</span>
+            <span class="book-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span>
             <span class="book-badge">Defense</span>
           </div>
         </div>
@@ -1262,7 +1309,7 @@
         <div class="book-cover">
           <div class="book-spine"></div>
           <div class="book-front">
-            <span class="book-emoji">🚗</span>
+            <span class="book-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg></span>
             <span class="book-badge">Auto Industry</span>
           </div>
         </div>
@@ -1285,7 +1332,7 @@
         <div class="book-cover">
           <div class="book-spine"></div>
           <div class="book-front">
-            <span class="book-emoji">🏗️</span>
+            <span class="book-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"></rect><path d="M12 12h.01"></path><path d="M17 12h.01"></path><path d="M7 12h.01"></path></svg></span>
             <span class="book-badge">Construction</span>
           </div>
         </div>
@@ -1317,39 +1364,51 @@
 
     <div class="included-grid">
       <div class="included-item">
-        <div class="included-icon">📋</div>
+        <div class="included-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+        </div>
         <h3 class="included-title">Policy Templates</h3>
         <p class="included-desc">Ready-to-customize security policies that meet industry regulations and best practices.</p>
       </div>
       <div class="included-item">
-        <div class="included-icon">🚨</div>
+        <div class="included-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+        </div>
         <h3 class="included-title">Incident Response</h3>
         <p class="included-desc">Step-by-step breach response plans and checklists for various attack scenarios.</p>
       </div>
       <div class="included-item">
-        <div class="included-icon">🎓</div>
+        <div class="included-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+        </div>
         <h3 class="included-title">Training Materials</h3>
         <p class="included-desc">Staff security awareness content and phishing defense training resources.</p>
       </div>
       <div class="included-item">
-        <div class="included-icon">✅</div>
+        <div class="included-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+        </div>
         <h3 class="included-title">Compliance Checklists</h3>
         <p class="included-desc">Audit-ready checklists aligned with your industry's regulatory requirements.</p>
       </div>
       <div class="included-item">
-        <div class="included-icon">🤝</div>
+        <div class="included-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        </div>
         <h3 class="included-title">Vendor Assessments</h3>
         <p class="included-desc">Third-party risk questionnaires and BAA templates for vendor management.</p>
       </div>
       <div class="included-item">
-        <div class="included-icon">📧</div>
+        <div class="included-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </div>
         <h3 class="included-title">Client Communications</h3>
         <p class="included-desc">Pre-written notifications, briefings, and security update templates.</p>
       </div>
     </div>
   </section>
 
-  <section class="testimonial" id="about">
+  <section class="testimonial">
     <div class="section-header">
       <div class="section-tag">// Trusted By Professionals</div>
       <h2 class="section-title">What Our Customers Say</h2>
@@ -1371,7 +1430,7 @@
     </div>
   </section>
 
-  <section class="cta-section" id="contact">
+  <section class="cta-section">
     <div class="cta-box">
       <h2 class="cta-title">Ready to Secure Your Business?</h2>
       <p class="cta-subtitle">
@@ -1389,18 +1448,24 @@
 
   <footer>
     <div class="footer-content">
-      <div class="footer-logo">CYBERZ</div>
+      <a href="index.html">
+        <img src="logo.png" alt="CyberZ" class="footer-logo">
+      </a>
       <ul class="footer-links">
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Service</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Support</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
       <p class="footer-copy">© 2026 CyberZ. All rights reserved. Protecting businesses, one bundle at a time.</p>
     </div>
   </footer>
 
   <script>
+    // Mobile menu toggle
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+
     // Smooth reveal on scroll
     const observerOptions = {
       threshold: 0.1,
