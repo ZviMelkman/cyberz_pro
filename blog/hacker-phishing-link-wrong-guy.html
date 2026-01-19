@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Hacker Sent a Phishing Link to the Wrong Guy — And Lost Everything | CyberZ</title>
+    <link rel="icon" type="image/png" href="../logo.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #333;
+            background: #fff;
+        }
+
+        /* Header */
+        header {
+            background: #0a0a0a;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul a {
+            color: #fff;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        nav ul a:hover {
+            color: #c81e1e;
+        }
+
+        /* Article */
+        article {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        h1 {
+            font-size: 2.4em;
+            color: #c81e1e;
+            line-height: 1.2;
+            margin-bottom: 10px;
+            text-decoration: underline;
+            text-align: center;
+        }
+
+        .date {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .hero-image {
+            width: 100%;
+            margin-bottom: 40px;
+            border-radius: 4px;
+        }
+
+        .intro {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.6em;
+            color: #111;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .stat-image {
+            width: 100%;
+            margin: 40px 0;
+            border-radius: 4px;
+        }
+
+        blockquote {
+            border-left: 3px solid #c81e1e;
+            padding-left: 20px;
+            margin: 30px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        .lesson-box {
+            background: #f5f5f5;
+            border-left: 4px solid #c81e1e;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .lesson-box strong {
+            color: #c81e1e;
+        }
+
+        .source {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+        }
+
+        .source a {
+            color: #c81e1e;
+        }
+
+        /* Back link */
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #c81e1e;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #0a0a0a;
+            color: #888;
+            text-align: center;
+            padding: 30px 20px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #c81e1e;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            nav ul a {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">
+                <img src="../logo.png" alt="CyberZ">
+            </a>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article>
+        <a href="../blog.html" class="back-link">← Back to Blog</a>
+
+        <h1>A Hacker Sent a Phishing Link to the Wrong Guy — And Lost Everything</h1>
+        <p class="date">January 19th, 2026</p>
+
+        <img src="cyberz-hacker-hacked.png" alt="A hacker sent a phishing link to the wrong guy - True Story" class="hero-image">
+
+        <p class="intro">When an Israeli cybersecurity team got targeted by a Booking.com scam, they didn't just avoid it. They dismantled the entire operation.</p>
+
+        <p>It started like any other phishing attempt.</p>
+
+        <p>Lidor Levi, head of an offensive cybersecurity team at CyberWall Global in Israel, had booked a hotel in the United States through Booking.com a few months earlier. A few days ago, he received a WhatsApp message that appeared to be from Booking and the hotel itself.</p>
+
+        <p>The message looked legitimate. It included his full name, exact booking dates, confirmation number, and the price he'd paid. It asked him to "re-verify" his credit card details within 24 hours — or his reservation would be canceled.</p>
+
+        <blockquote>"Someone outside the industry could have easily fallen for it. Everything looked exactly like Booking."</blockquote>
+
+        <p>But Levi isn't outside the industry. He investigates cyberattacks for a living. And instead of panicking, he started digging.</p>
+
+        <h2>The Investigation Begins</h2>
+
+        <p>Levi clicked the link — carefully. The fake website was nearly flawless: Booking's logo, an identical interface, and his personal details already populated in the form.</p>
+
+        <p>His first move was basic but critical: check the domain registration. The site had been registered in 2025 with no connection to Booking.com. He also contacted the real hotel and Booking directly. Both confirmed they hadn't sent the message and don't operate that way with customers.</p>
+
+        <p>"I realized this was something bigger," Levi said.</p>
+
+        <p>He brought in two colleagues from his team — Niv Kochen and Adam Kahlon — and they began analyzing the phishing site using the same offensive tools they use professionally to test organizations' security defenses.</p>
+
+        <h2>Inside the Attacker's Server</h2>
+
+        <p>The team found a chat feature on the fake site that looked like customer support. In reality, it was a simple chatbot that forwarded every piece of information directly to the attacker.</p>
+
+        <p>They also discovered a Cross-Site Scripting (XSS) vulnerability — a well-known security flaw that allows attackers to inject malicious code and steal user data.</p>
+
+        <p>But the real breakthrough came when they found an unsecured file upload mechanism. The attacker had used it but hadn't locked it down properly.</p>
+
+        <p>Using this weakness, the team uploaded a PHP webshell — a tool that lets you run commands on a server remotely. From there, they established a reverse shell connection, giving them deep access to the attacker's infrastructure.</p>
+
+        <blockquote>"At that point, we weren't on the defensive anymore. We were inside his system."</blockquote>
+
+        <h2>Three Years of Stolen Data</h2>
+
+        <p>What they found was disturbing.</p>
+
+        <p>The server contained organized folders for different brands: Booking, banks from around the world, hotel chains, and hundreds of other companies. Inside were open databases filled with names, email addresses, credit card numbers, and booking details.</p>
+
+        <p>They also found messages from victims — people who had realized they'd been scammed and were desperately pleading for their money back.</p>
+
+        <blockquote>"That was the hardest part. We weren't affected, but so many others were."</blockquote>
+
+        <p>Based on their analysis, the attacker had been running this operation for more than three years, likely collecting tens of thousands of dollars — possibly more. Evidence suggested the scammer was operating from India.</p>
+
+        <img src="cyberz-blog-stat-card.png" alt="What they found inside - 3+ years of operation, 3 databases of stolen data, 100s of phishing URLs, tens of thousands stolen - All wiped in a single night" class="stat-image">
+
+        <h2>Taking It All Down</h2>
+
+        <p>The team made a decision that went beyond self-defense.</p>
+
+        <blockquote>"We told ourselves: if we already have access, and people are getting hurt, we can't just walk away."</blockquote>
+
+        <p>They deleted all three databases containing stolen information. They disabled the file upload mechanism, shut down the phishing infrastructure, and took the entire operation offline.</p>
+
+        <p>"We destroyed three years of his work," Levi said. "We gave him a taste of his own medicine."</p>
+
+        <p>The work took an entire night. By the time they finished, the system was completely neutralized.</p>
+
+        <h2>Booking's Response</h2>
+
+        <p>The team documented everything and contacted Booking.com. According to Levi, the company was shocked by the findings. They confirmed that the hotel's database had indeed been breached — which explained how the attacker had access to real booking details.</p>
+
+        <p>The investigation revealed hundreds of phishing URLs with unique tracking codes for each victim, allowing the scammer to monitor everyone who fell for the trap.</p>
+
+        <h2>The Lesson</h2>
+
+        <div class="lesson-box">
+            <p><strong>Don't click links you don't recognize.</strong> And if anyone asks for your credit card details, always verify directly with the official source — by phone, not through links they send you.</p>
+        </div>
+
+        <p>This story is a reminder that in the world of cybersecurity, one phishing attempt sent to the wrong person can bring down years of criminal activity overnight.</p>
+
+        <p class="source">This story was originally reported by Yochai Shwieger for Israel Hayom on January 16, 2026.<br>
+        Original article (in Hebrew): <a href="https://www.israelhayom.co.il/tech/tech-news/article/19693007" target="_blank">israelhayom.co.il</a></p>
+    </article>
+
+    <footer>
+        <p>© 2026 CyberZ. All rights reserved. | <a href="../blog.html">Blog</a> | <a href="../contact.html">Contact</a></p>
+    </footer>
+</body>
+</html>
