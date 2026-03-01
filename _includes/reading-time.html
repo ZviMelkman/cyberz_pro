@@ -1,0 +1,1 @@
+{% assign words = content | number_of_words %}{% assign mins = words | divided_by: 200 %}{% if mins < 1 %}1 min read{% else %}{{ mins }} min read{% endif %}
