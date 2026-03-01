@@ -27,7 +27,7 @@ In late 2025, 700Credit disclosed that attackers had accessed its dealership web
 
 The data stolen included full names, mailing addresses, dates of birth, and Social Security numbers. All unencrypted. All tied to customers who filled out credit applications at dealerships.
 
-[![700Credit Breach Stat Card](/blog/images/2-260301-700credit-breach-stats.png)](https://www.amazon.com/dp/B0F1GP1DSY)
+[![700Credit Breach Stat Card](/blog/images/2-260301-700credit-breach-stats.png)](https://www.amazon.com/dp/B0G87LXZ4H)
 
 ## How the Attack Worked
 
@@ -43,7 +43,7 @@ The lesson here is brutal: **the attackers didn't need to hack your dealership. 
 
 Here's where it gets personal for dealership owners.
 
-The [FTC Safeguards Rule](https://www.amazon.com/dp/B0F1GP1DSY) requires auto dealerships to implement comprehensive information security programs to protect customer financial data. This isn't optional — it's federal law, and the FTC has been actively enforcing it.
+The [FTC Safeguards Rule](https://www.amazon.com/dp/B0G87LXZ4H) requires auto dealerships to implement comprehensive information security programs to protect customer financial data. This isn't optional — it's federal law, and the FTC has been actively enforcing it.
 
 Under the Safeguards Rule, your dealership is responsible for:
 
@@ -68,13 +68,13 @@ Contact 700Credit's dedicated breach line at **(866) 273-0345**. Review any noti
 Pull your contract with every third-party vendor that touches customer financial data. Look for security requirements, breach notification clauses, and liability provisions. If those clauses don't exist, that's your first red flag.
 
 **3. Audit your vendor list.**
-Most dealerships don't even know how many vendors have access to customer data. Credit bureaus, DMS providers, F&I product vendors, marketing platforms — each one is a potential attack vector. Document every vendor and assess their security posture. Our [Auto Dealership Cybersecurity guide](https://www.amazon.com/dp/B0F1GP1DSY) includes a vendor risk checklist to help you get started.
+Most dealerships don't even know how many vendors have access to customer data. Credit bureaus, DMS providers, F&I product vendors, marketing platforms — each one is a potential attack vector. Document every vendor and assess their security posture. Our [Auto Dealership Cybersecurity guide](https://www.amazon.com/dp/B0G87LXZ4H) includes a vendor risk checklist to help you get started.
 
 **4. Notify affected customers (if required).**
 Depending on your state, you may have independent notification obligations even if 700Credit handles the primary notification. Consult with your legal counsel — 700Credit has explicitly stated they cannot advise dealerships on specific legal obligations.
 
 **5. Strengthen your Safeguards Rule compliance.**
-If you haven't implemented a formal Written Information Security Plan (WISP), this is your wake-up call. The FTC isn't waiting for you to catch up. Document your risk assessments, access controls, incident response procedures, and [vendor management protocols](https://www.amazon.com/dp/B0F1GP1DSY).
+If you haven't implemented a formal Written Information Security Plan (WISP), this is your wake-up call. The FTC isn't waiting for you to catch up. Document your risk assessments, access controls, incident response procedures, and [vendor management protocols](https://www.amazon.com/dp/B0G87LXZ4H).
 
 **6. Enable MFA everywhere.**
 Multi-factor authentication should be active on every system that touches customer data — your DMS, email, CRM, and any vendor portals. If 700Credit's breach taught us anything, it's that credential-based access is the front door for attackers.
@@ -94,5 +94,5 @@ Don't let your vendor be the weakest link.
 <div class="cta-box">
   <h3>Get Your Dealership Compliant</h3>
   <p>Our Auto Dealership Cybersecurity guide covers FTC Safeguards Rule compliance, vendor risk management, and incident response — built specifically for dealership owners and GMs.</p>
-  <a href="https://www.amazon.com/dp/B0F1GP1DSY" class="cta-button">Get the Book on Amazon</a>
+  <a href="https://www.amazon.com/dp/B0G87LXZ4H" class="cta-button">Get the Book on Amazon</a>
 </div>
