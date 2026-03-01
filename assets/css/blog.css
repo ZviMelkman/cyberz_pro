@@ -718,6 +718,14 @@ nav {
   color: var(--dark-bg);
 }
 
+.post-content .cta-button {
+  color: var(--dark-bg);
+}
+
+.post-content .cta-button:hover {
+  color: var(--dark-bg);
+}
+
 /* --- Footer (matches your index.html) --- */
 footer {
   position: relative;
