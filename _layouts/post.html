@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+  <link rel="stylesheet" href="/assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  {% include nav.html %}
+
+  <article class="post">
+    <div class="post-nav-top">
+      <a href="/blog" class="back-link">&larr; Back to Blog</a>
+    </div>
+
+    {% if page.image %}
+    <div class="post-hero">
+      <img src="{{ page.image }}" alt="{{ page.title }}">
+    </div>
+    {% endif %}
+
+    <header class="post-header">
+      {% if page.category %}
+      <span class="post-category">{{ page.category }}</span>
+      {% endif %}
+      <h1 class="post-title">{{ page.title }}</h1>
+      <div class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+        <span class="meta-sep">&bull;</span>
+        <span class="reading-time">{% include reading-time.html %}</span>
+      </div>
+    </header>
+
+    <div class="post-content">
+      {{ content }}
+    </div>
+
+    {% if page.source_name %}
+    <div class="post-source">
+      <p>Originally reported by {{ page.source_author | default: page.source_name }} for {{ page.source_name }}{% if page.source_date %} on {{ page.source_date }}{% endif %}.</p>
+      {% if page.source_url %}
+      <p><a href="{{ page.source_url }}" target="_blank" rel="noopener">Read original article &rarr;</a></p>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    <footer class="post-footer">
+      <div class="post-tags">
+        {% for tag in page.tags %}
+        <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      <a href="/blog" class="back-link">&larr; Back to All Posts</a>
+    </footer>
+  </article>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">CYBERZ</div>
+      <ul class="footer-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+      <p class="footer-copy">&copy; {{ 'now' | date: "%Y" }} CyberZ. All rights reserved. Protecting businesses, one bundle at a time.</p>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      nav.style.background = window.scrollY > 50 ? 'rgba(10, 10, 15, 0.95)' : 'rgba(10, 10, 15, 0.8)';
+    });
+  </script>
+</body>
+</html>
