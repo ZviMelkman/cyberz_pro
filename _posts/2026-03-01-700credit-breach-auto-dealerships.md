@@ -1,4 +1,3 @@
-[2026-03-01-700credit-breach-auto-dealerships.md](https://github.com/user-attachments/files/25663416/2026-03-01-700credit-breach-auto-dealerships.md)
 ---
 layout: post
 title: "5.8 Million SSNs Exposed — The 700Credit Breach Every Dealership Needs to Know About"
