@@ -7,7 +7,7 @@ description: Cybersecurity insights, breach analysis, and practical guides for s
 <style>
   .blog-header {
     text-align: center;
-    padding: 20px 40px 18px;
+    padding: 20px 40px 16px;
   }
   .blog-header .section-tag {
     font-family: 'Space Mono', monospace;
@@ -34,97 +34,7 @@ description: Cybersecurity insights, breach analysis, and practical guides for s
     margin: 0 auto;
     padding: 16px 24px 40px;
   }
-  .featured-card {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: 8px;
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    margin-bottom: 16px;
-    transition: border-color 0.2s, transform 0.2s;
-    height: 160px;
-  }
-  .featured-card:hover {
-    border-color: var(--cyan);
-    transform: translateY(-2px);
-  }
-  .featured-card-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    background: #0d0d16;
-  }
-  .featured-card-image-placeholder {
-    width: 100%;
-    height: 100%;
-    background: #0d0d16;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .featured-card-body {
-    padding: 16px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .featured-label {
-    display: flex;
-    gap: 6px;
-    margin-bottom: 7px;
-  }
-  .featured-label span {
-    font-family: 'Space Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-    border: 1px solid;
-    padding: 2px 8px;
-    border-radius: 3px;
-  }
-  .featured-card-title {
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 800;
-    font-size: 14px;
-    color: #fff;
-    line-height: 1.3;
-    margin-bottom: 7px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  .featured-card-desc {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 13px;
-    color: var(--text-secondary);
-    line-height: 1.4;
-    margin-bottom: 8px;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  .featured-card-meta {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .featured-card-date {
-    font-family: 'Space Mono', monospace;
-    font-size: 10px;
-    color: var(--text-secondary);
-  }
-  .featured-card-cta {
-    font-family: 'Space Mono', monospace;
-    font-size: 10px;
-    color: var(--cyan);
-  }
-  .cards-grid {
+  .blog-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 14px;
@@ -144,12 +54,41 @@ description: Cybersecurity insights, breach analysis, and practical guides for s
     border-color: var(--cyan);
     transform: translateY(-2px);
   }
+  .card.featured {
+    grid-column: span 2;
+    grid-row: span 1;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    height: 190px;
+  }
   .card-accent-bar { height: 3px; width: 100%; }
+  .card.featured .card-accent-bar { display: none; }
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background: #0d0d16;
+  }
+  .card-image-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 100px;
+    background: #0d0d16;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .card-body {
-    padding: 12px 14px 14px;
+    padding: 14px 16px 16px;
     display: flex;
     flex-direction: column;
     flex: 1;
+  }
+  .card.featured .card-body {
+    padding: 18px 22px;
+    justify-content: center;
+    border-left: 3px solid var(--accent-color, #00f0ff);
   }
   .card-category {
     font-family: 'Space Mono', monospace;
@@ -157,6 +96,20 @@ description: Cybersecurity insights, breach analysis, and practical guides for s
     letter-spacing: 0.07em;
     text-transform: uppercase;
     margin-bottom: 6px;
+  }
+  .card-label {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+  .card-label span {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: 1px solid;
+    padding: 2px 8px;
+    border-radius: 3px;
   }
   .card-title {
     font-family: 'Orbitron', sans-serif;
@@ -170,6 +123,10 @@ description: Cybersecurity insights, breach analysis, and practical guides for s
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+  .card.featured .card-title {
+    font-size: 15px;
+    -webkit-line-clamp: 2;
   }
   .card-desc {
     font-family: 'Rajdhani', sans-serif;
@@ -217,19 +174,14 @@ description: Cybersecurity insights, breach analysis, and practical guides for s
     transition: border-color 0.2s, color 0.2s;
   }
   .load-more-btn:hover { border-color: var(--cyan); color: var(--cyan); }
-  .no-posts {
-    text-align: center;
-    padding: 40px 24px;
-    color: var(--text-secondary);
-  }
   @media (max-width: 860px) {
-    .featured-card { grid-template-columns: 1fr; height: auto; }
-    .featured-card-image { height: 140px; }
-    .cards-grid { grid-template-columns: 1fr 1fr; }
+    .card.featured { grid-column: span 1; grid-template-columns: 1fr; height: auto; }
+    .card-image { height: 140px; }
+    .blog-grid { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 560px) {
     .blog-wrap { padding: 12px 16px 32px; }
-    .cards-grid { grid-template-columns: 1fr; }
+    .blog-grid { grid-template-columns: 1fr; }
   }
 </style>
 
@@ -240,18 +192,15 @@ description: Cybersecurity insights, breach analysis, and practical guides for s
 </div>
 
 <div class="blog-wrap">
-
   {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
   {% assign post_count = sorted_posts | size %}
 
   {% if post_count == 0 %}
-  <div class="no-posts">
-    <p style="font-family:'Space Mono',monospace;font-size:13px;color:var(--cyan);">// POSTS INCOMING</p>
-  </div>
-
+  <p style="text-align:center;font-family:'Space Mono',monospace;font-size:13px;color:var(--cyan);padding:40px;">// POSTS INCOMING</p>
   {% else %}
 
-  {% for post in sorted_posts limit:1 %}
+  <div class="blog-grid">
+  {% for post in sorted_posts limit:8 %}
     {% assign cat_up = post.category | upcase %}
     {% assign accent = "#00f0ff" %}
     {% if cat_up == "HEALTHCARE" %}{% assign accent = "#00ff88" %}
@@ -264,63 +213,45 @@ description: Cybersecurity insights, breach analysis, and practical guides for s
     {% elsif cat_up == "CONSTRUCTION" %}{% assign accent = "#00ff88" %}
     {% elsif cat_up == "DEFENSE" %}{% assign accent = "#0088ff" %}
     {% endif %}
-  <a href="{{ post.url }}" class="featured-card">
-    {% if post.image %}
-      <img class="featured-card-image" src="{{ post.image }}" alt="{{ post.title }}" loading="eager" />
-    {% else %}
-      <div class="featured-card-image-placeholder">
-        <span style="font-family:'Space Mono',monospace;font-size:10px;color:#1a1a25;">CYBERZ.PRO</span>
-      </div>
-    {% endif %}
-    <div class="featured-card-body">
-      <div class="featured-label">
-        <span style="color:{{ accent }};border-color:{{ accent }};background:{{ accent }}15;">{{ post.category }}</span>
-        <span style="color:#8a8a9a;border-color:#1a1a25;background:transparent;">LATEST</span>
-      </div>
-      <h2 class="featured-card-title">{{ post.title }}</h2>
-      {% if post.description %}
-        <p class="featured-card-desc">{{ post.description }}</p>
-      {% endif %}
-      <div class="featured-card-meta">
-        <span class="featured-card-date">{{ post.date | date: "%B %-d, %Y" }}</span>
-        <span class="featured-card-cta">Read Full Post →</span>
-      </div>
-    </div>
-  </a>
-  {% endfor %}
 
-  {% if post_count > 1 %}
-  <div class="cards-grid">
-    {% for post in sorted_posts offset:1 limit:7 %}
-      {% assign cat_up = post.category | upcase %}
-      {% assign accent = "#00f0ff" %}
-      {% if cat_up == "HEALTHCARE" %}{% assign accent = "#00ff88" %}
-      {% elsif cat_up == "ACCOUNTING" %}{% assign accent = "#0088ff" %}
-      {% elsif cat_up == "LEGAL" %}{% assign accent = "#8b5cf6" %}
-      {% elsif cat_up == "REAL ESTATE" %}{% assign accent = "#ff8800" %}
-      {% elsif cat_up == "SAAS" %}{% assign accent = "#ff0080" %}
-      {% elsif cat_up == "FAMILY SAFETY" %}{% assign accent = "#8b5cf6" %}
-      {% elsif cat_up == "AUTO DEALERS" %}{% assign accent = "#ff8800" %}
-      {% elsif cat_up == "CONSTRUCTION" %}{% assign accent = "#00ff88" %}
-      {% elsif cat_up == "DEFENSE" %}{% assign accent = "#0088ff" %}
+    {% if forloop.first %}
+    <a href="{{ post.url }}" class="card featured" style="--accent-color:{{ accent }};">
+      {% if post.image %}
+        <img class="card-image" src="{{ post.image }}" alt="{{ post.title }}" loading="eager" />
+      {% else %}
+        <div class="card-image-placeholder">
+          <span style="font-family:'Space Mono',monospace;font-size:10px;color:#1a1a25;">CYBERZ</span>
+        </div>
       {% endif %}
+      <div class="card-body">
+        <div class="card-label">
+          <span style="color:{{ accent }};border-color:{{ accent }};background:{{ accent }}15;">{{ post.category }}</span>
+          <span style="color:#8a8a9a;border-color:#1a1a25;background:transparent;">LATEST</span>
+        </div>
+        <h2 class="card-title">{{ post.title }}</h2>
+        {% if post.description %}<p class="card-desc">{{ post.description }}</p>{% endif %}
+        <div class="card-footer">
+          <span class="card-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+          <span class="card-read">Read Full Post →</span>
+        </div>
+      </div>
+    </a>
+    {% else %}
     <a href="{{ post.url }}" class="card">
       <div class="card-accent-bar" style="background:{{ accent }};"></div>
       <div class="card-body">
         <span class="card-category" style="color:{{ accent }};">{{ post.category }}</span>
         <h3 class="card-title">{{ post.title }}</h3>
-        {% if post.description %}
-          <p class="card-desc">{{ post.description }}</p>
-        {% endif %}
+        {% if post.description %}<p class="card-desc">{{ post.description }}</p>{% endif %}
         <div class="card-footer">
           <span class="card-date">{{ post.date | date: "%b %-d, %Y" }}</span>
           <span class="card-read">Read →</span>
         </div>
       </div>
     </a>
-    {% endfor %}
+    {% endif %}
+  {% endfor %}
   </div>
-  {% endif %}
 
   {% if post_count > 8 %}
   <div class="load-more-wrap">
@@ -329,5 +260,4 @@ description: Cybersecurity insights, breach analysis, and practical guides for s
   {% endif %}
 
   {% endif %}
-
 </div>
