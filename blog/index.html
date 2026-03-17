@@ -7,26 +7,26 @@ description: Cybersecurity insights, breach analysis, and practical guides for s
 <style>
   .blog-header {
     text-align: center;
-    padding: 36px 40px 32px;
+    padding: 20px 40px 18px;
     border-bottom: 1px solid var(--card-border);
     background: linear-gradient(180deg, #0d0d16 0%, var(--dark-bg) 100%);
   }
   .blog-header .section-tag {
     font-family: 'Space Mono', monospace;
-    font-size: 12px;
+    font-size: 11px;
     color: var(--cyan);
     letter-spacing: 0.1em;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
   }
   .blog-header h1 {
     font-family: 'Orbitron', sans-serif;
     font-weight: 800;
-    font-size: clamp(22px, 3.5vw, 34px);
+    font-size: clamp(18px, 2.5vw, 26px);
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
   }
   .blog-header p {
-    font-size: 16px;
+    font-size: 14px;
     color: var(--text-secondary);
     max-width: 520px;
     margin: 0 auto;
@@ -34,20 +34,20 @@ description: Cybersecurity insights, breach analysis, and practical guides for s
   .blog-wrap {
     max-width: 1160px;
     margin: 0 auto;
-    padding: 32px 24px 60px;
+    padding: 20px 24px 40px;
   }
   .featured-card {
     display: grid;
-    grid-template-columns: 340px 1fr;
+    grid-template-columns: 300px 1fr;
     background: var(--card-bg);
     border: 1px solid var(--card-border);
-    border-radius: 12px;
+    border-radius: 10px;
     overflow: hidden;
     text-decoration: none;
     color: inherit;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     transition: border-color 0.2s, transform 0.2s;
-    height: 220px;
+    height: 180px;
   }
   .featured-card:hover {
     border-color: var(--cyan);
@@ -69,15 +69,15 @@ description: Cybersecurity insights, breach analysis, and practical guides for s
     justify-content: center;
   }
   .featured-card-body {
-    padding: 24px 30px;
+    padding: 18px 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
   .featured-label {
     display: flex;
-    gap: 8px;
-    margin-bottom: 10px;
+    gap: 6px;
+    margin-bottom: 8px;
   }
   .featured-label span {
     font-family: 'Space Mono', monospace;
@@ -85,23 +85,23 @@ description: Cybersecurity insights, breach analysis, and practical guides for s
     letter-spacing: 0.07em;
     text-transform: uppercase;
     border: 1px solid;
-    padding: 3px 10px;
+    padding: 2px 8px;
     border-radius: 3px;
   }
   .featured-card-title {
     font-family: 'Orbitron', sans-serif;
     font-weight: 800;
-    font-size: 17px;
+    font-size: 15px;
     color: #fff;
     line-height: 1.3;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
   .featured-card-desc {
     font-family: 'Rajdhani', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     color: var(--text-secondary);
-    line-height: 1.5;
-    margin-bottom: 14px;
+    line-height: 1.4;
+    margin-bottom: 10px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -114,23 +114,23 @@ description: Cybersecurity insights, breach analysis, and practical guides for s
   }
   .featured-card-date {
     font-family: 'Space Mono', monospace;
-    font-size: 11px;
+    font-size: 10px;
     color: var(--text-secondary);
   }
   .featured-card-cta {
     font-family: 'Space Mono', monospace;
-    font-size: 11px;
+    font-size: 10px;
     color: var(--cyan);
   }
   .cards-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 16px;
   }
   .card {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
     text-decoration: none;
     color: inherit;
@@ -144,7 +144,7 @@ description: Cybersecurity insights, breach analysis, and practical guides for s
   }
   .card-accent-bar { height: 3px; width: 100%; }
   .card-body {
-    padding: 18px 20px 20px;
+    padding: 14px 16px 16px;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -154,15 +154,15 @@ description: Cybersecurity insights, breach analysis, and practical guides for s
     font-size: 10px;
     letter-spacing: 0.07em;
     text-transform: uppercase;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
   .card-title {
     font-family: 'Orbitron', sans-serif;
     font-weight: 700;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1.35;
     color: #fff;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     flex: 1;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -171,10 +171,10 @@ description: Cybersecurity insights, breach analysis, and practical guides for s
   }
   .card-desc {
     font-family: 'Rajdhani', sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     color: var(--text-secondary);
     line-height: 1.4;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -198,17 +198,17 @@ description: Cybersecurity insights, breach analysis, and practical guides for s
   }
   .load-more-wrap {
     text-align: center;
-    margin-top: 36px;
+    margin-top: 24px;
   }
   .load-more-btn {
     font-family: 'Orbitron', sans-serif;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 11px;
     letter-spacing: 0.08em;
     color: var(--text-secondary);
     background: var(--card-bg);
     border: 1px solid var(--card-border);
-    padding: 12px 32px;
+    padding: 10px 28px;
     border-radius: 6px;
     text-decoration: none;
     display: inline-block;
@@ -217,24 +217,23 @@ description: Cybersecurity insights, breach analysis, and practical guides for s
   .load-more-btn:hover { border-color: var(--cyan); color: var(--cyan); }
   .no-posts {
     text-align: center;
-    padding: 60px 24px;
+    padding: 40px 24px;
     color: var(--text-secondary);
   }
   .no-posts h3 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     color: var(--cyan);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
   @media (max-width: 860px) {
     .featured-card { grid-template-columns: 1fr; height: auto; }
-    .featured-card-image { height: 180px; }
-    .featured-card-body { padding: 20px; }
+    .featured-card-image { height: 160px; }
+    .featured-card-body { padding: 16px; }
     .cards-grid { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 560px) {
-    .blog-header { padding: 28px 20px 24px; }
-    .blog-wrap { padding: 24px 16px 48px; }
+    .blog-wrap { padding: 16px 16px 40px; }
     .cards-grid { grid-template-columns: 1fr; }
   }
 </style>
@@ -276,7 +275,7 @@ description: Cybersecurity insights, breach analysis, and practical guides for s
       <img class="featured-card-image" src="{{ post.image }}" alt="{{ post.title }}" loading="eager" />
     {% else %}
       <div class="featured-card-image-placeholder">
-        <span style="font-family:'Space Mono',monospace;font-size:11px;color:#1a1a25;">CYBERZ.PRO</span>
+        <span style="font-family:'Space Mono',monospace;font-size:10px;color:#1a1a25;">CYBERZ.PRO</span>
       </div>
     {% endif %}
     <div class="featured-card-body">
