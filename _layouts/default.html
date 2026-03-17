@@ -15,17 +15,16 @@
     {{ content }}
   </main>
 
-  <footer>
-    <div class="footer-content">
-      <div class="footer-logo">CYBERZ</div>
-      <ul class="footer-links">
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Service</a></li>
-        <li><a href="/#contact">Contact</a></li>
-      </ul>
-      <p class="footer-copy">&copy; {{ 'now' | date: "%Y" }} CyberZ. All rights reserved. Protecting businesses, one bundle at a time.</p>
+<footer style="padding:16px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;border:none;">
+    <div style="font-family:'Orbitron',sans-serif;font-weight:700;font-size:16px;"><span style="color:#00f0ff;">CYBER</span><span style="color:#fff;">Z</span></div>
+    <p style="font-family:'Space Mono',monospace;font-size:11px;color:#8a8a9a;margin:0;">&copy; {{ 'now' | date: "%Y" }} CyberZ. All rights reserved.</p>
+    <div style="display:flex;gap:20px;">
+      <a href="#" style="font-family:'Space Mono',monospace;font-size:11px;color:#8a8a9a;text-decoration:none;">Privacy</a>
+      <a href="#" style="font-family:'Space Mono',monospace;font-size:11px;color:#8a8a9a;text-decoration:none;">Terms</a>
+      <a href="/#contact" style="font-family:'Space Mono',monospace;font-size:11px;color:#8a8a9a;text-decoration:none;">Contact</a>
     </div>
   </footer>
+  
 
   <script>
     window.addEventListener('scroll', () => {
