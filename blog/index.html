@@ -3,186 +3,25 @@ layout: default
 title: Blog
 description: Cybersecurity insights, breach analysis, and practical guides for small businesses.
 ---
-
 <style>
-  .blog-header {
-    text-align: center;
-    padding: 20px 40px 16px;
-  }
-  .blog-header .section-tag {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    color: var(--cyan);
-    letter-spacing: 0.1em;
-    margin-bottom: 6px;
-  }
-  .blog-header h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 800;
-    font-size: clamp(18px, 2.5vw, 26px);
-    color: #fff;
-    margin-bottom: 6px;
-  }
-  .blog-header p {
-    font-size: 14px;
-    color: var(--text-secondary);
-    max-width: 520px;
-    margin: 0 auto;
-  }
-  .blog-wrap {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 16px 24px 40px;
-  }
-  .blog-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-  }
-  .card {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: 8px;
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-    transition: border-color 0.2s, transform 0.2s;
-  }
-  .card:hover {
-    border-color: var(--cyan);
-    transform: translateY(-2px);
-  }
-  .card.featured {
-    grid-column: span 2;
-    grid-row: span 1;
-    display: grid;
-    grid-template-columns: 260px 1fr;
-    height: 190px;
-  }
-  .card-accent-bar { height: 3px; width: 100%; }
-  .card.featured .card-accent-bar { display: none; }
-  .card-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    background: #0d0d16;
-  }
-  .card-image-placeholder {
-    width: 100%;
-    height: 100%;
-    min-height: 100px;
-    background: #0d0d16;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .card-body {
-    padding: 14px 16px 16px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-  }
-  .card.featured .card-body {
-    padding: 18px 22px;
-    justify-content: center;
-    border-left: 3px solid var(--accent-color, #00f0ff);
-  }
-  .card-category {
-    font-family: 'Space Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-    margin-bottom: 6px;
-  }
-  .card-label {
-    display: flex;
-    gap: 6px;
-    margin-bottom: 8px;
-  }
-  .card-label span {
-    font-family: 'Space Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    border: 1px solid;
-    padding: 2px 8px;
-    border-radius: 3px;
-  }
-  .card-title {
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 1.35;
-    color: #fff;
-    margin-bottom: 6px;
-    flex: 1;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  .card.featured .card-title {
-    font-size: 15px;
-    -webkit-line-clamp: 2;
-  }
-  .card-desc {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 13px;
-    color: var(--text-secondary);
-    line-height: 1.4;
-    margin-bottom: 10px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  .card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: auto;
-  }
-  .card-date {
-    font-family: 'Space Mono', monospace;
-    font-size: 10px;
-    color: var(--text-secondary);
-  }
-  .card-read {
-    font-family: 'Space Mono', monospace;
-    font-size: 10px;
-    color: var(--cyan);
-  }
-  .load-more-wrap {
-    text-align: center;
-    margin-top: 20px;
-  }
-  .load-more-btn {
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 700;
-    font-size: 11px;
-    letter-spacing: 0.08em;
-    color: var(--text-secondary);
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    padding: 10px 28px;
-    border-radius: 6px;
-    text-decoration: none;
-    display: inline-block;
-    transition: border-color 0.2s, color 0.2s;
-  }
-  .load-more-btn:hover { border-color: var(--cyan); color: var(--cyan); }
-  @media (max-width: 860px) {
-    .card.featured { grid-column: span 1; grid-template-columns: 1fr; height: auto; }
-    .card-image { height: 140px; }
-    .blog-grid { grid-template-columns: 1fr 1fr; }
-  }
-  @media (max-width: 560px) {
-    .blog-wrap { padding: 12px 16px 32px; }
-    .blog-grid { grid-template-columns: 1fr; }
-  }
+  .blog-header{text-align:center;padding:20px 40px 16px;}
+  .blog-header .section-tag{font-family:'Space Mono',monospace;font-size:11px;color:var(--cyan);letter-spacing:.1em;margin-bottom:6px;}
+  .blog-header h1{font-family:'Orbitron',sans-serif;font-weight:800;font-size:clamp(18px,2.5vw,26px);color:#fff;margin-bottom:6px;}
+  .blog-header p{font-size:14px;color:var(--text-secondary);max-width:520px;margin:0 auto;}
+  .blog-wrap{max-width:1100px;margin:0 auto;padding:16px 24px 40px;}
+  .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:border-color .2s,transform .2s;}
+  .card:hover{border-color:var(--cyan);transform:translateY(-2px);}
+  .card-accent-bar{height:3px;width:100%;}
+  .card-body{padding:14px 16px 16px;display:flex;flex-direction:column;flex:1;}
+  .card-category{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.07em;text-transform:uppercase;margin-bottom:6px;}
+  .card-title{font-family:'Orbitron',sans-serif;font-weight:700;font-size:13px;line-height:1.35;color:#fff;margin-bottom:8px;flex:1;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+  .card-desc{font-family:'Rajdhani',sans-serif;font-size:13px;color:var(--text-secondary);line-height:1.4;margin-bottom:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+  .card-footer{display:flex;justify-content:space-between;align-items:center;margin-top:auto;}
+  .card-date{font-family:'Space Mono',monospace;font-size:10px;color:var(--text-secondary);}
+  .card-read{font-family:'Space Mono',monospace;font-size:10px;color:var(--cyan);}
+  @media(max-width:860px){.blog-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:560px){.blog-wrap{padding:12px 16px 32px;}.blog-grid{grid-template-columns:1fr;}}
 </style>
 
 <div class="blog-header">
@@ -193,14 +32,11 @@ description: Cybersecurity insights, breach analysis, and practical guides for s
 
 <div class="blog-wrap">
   {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
-  {% assign post_count = sorted_posts | size %}
-
-  {% if post_count == 0 %}
+  {% if sorted_posts.size == 0 %}
   <p style="text-align:center;font-family:'Space Mono',monospace;font-size:13px;color:var(--cyan);padding:40px;">// POSTS INCOMING</p>
   {% else %}
-
   <div class="blog-grid">
-  {% for post in sorted_posts limit:8 %}
+  {% for post in sorted_posts limit:9 %}
     {% assign cat_up = post.category | upcase %}
     {% assign accent = "#00f0ff" %}
     {% if cat_up == "HEALTHCARE" %}{% assign accent = "#00ff88" %}
@@ -213,34 +49,10 @@ description: Cybersecurity insights, breach analysis, and practical guides for s
     {% elsif cat_up == "CONSTRUCTION" %}{% assign accent = "#00ff88" %}
     {% elsif cat_up == "DEFENSE" %}{% assign accent = "#0088ff" %}
     {% endif %}
-
-    {% if forloop.first %}
-    <a href="{{ post.url }}" class="card featured" style="--accent-color:{{ accent }};">
-      {% if post.image %}
-        <img class="card-image" src="{{ post.image }}" alt="{{ post.title }}" loading="eager" />
-      {% else %}
-        <div class="card-image-placeholder">
-          <span style="font-family:'Space Mono',monospace;font-size:10px;color:#1a1a25;">CYBERZ</span>
-        </div>
-      {% endif %}
-      <div class="card-body">
-        <div class="card-label">
-          <span style="color:{{ accent }};border-color:{{ accent }};background:{{ accent }}15;">{{ post.category }}</span>
-          <span style="color:#8a8a9a;border-color:#1a1a25;background:transparent;">LATEST</span>
-        </div>
-        <h2 class="card-title">{{ post.title }}</h2>
-        {% if post.description %}<p class="card-desc">{{ post.description }}</p>{% endif %}
-        <div class="card-footer">
-          <span class="card-date">{{ post.date | date: "%B %-d, %Y" }}</span>
-          <span class="card-read">Read Full Post →</span>
-        </div>
-      </div>
-    </a>
-    {% else %}
     <a href="{{ post.url }}" class="card">
       <div class="card-accent-bar" style="background:{{ accent }};"></div>
       <div class="card-body">
-        <span class="card-category" style="color:{{ accent }};">{{ post.category }}</span>
+        <span class="card-category" style="color:{{ accent }};">{{ post.category }}{% if forloop.first %} &nbsp;·&nbsp; <span style="color:#8a8a9a;">LATEST</span>{% endif %}</span>
         <h3 class="card-title">{{ post.title }}</h3>
         {% if post.description %}<p class="card-desc">{{ post.description }}</p>{% endif %}
         <div class="card-footer">
@@ -249,15 +61,7 @@ description: Cybersecurity insights, breach analysis, and practical guides for s
         </div>
       </div>
     </a>
-    {% endif %}
   {% endfor %}
   </div>
-
-  {% if post_count > 8 %}
-  <div class="load-more-wrap">
-    <a href="/blog/archive" class="load-more-btn">VIEW ALL POSTS →</a>
-  </div>
-  {% endif %}
-
   {% endif %}
 </div>
