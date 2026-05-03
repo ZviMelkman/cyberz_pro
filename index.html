@@ -412,6 +412,8 @@
       border: 1px solid var(--card-border);
     }
 
+    .industry-card[data-industry="aisecurity"] { --accent-color: var(--cyan); }
+    .industry-card[data-industry="defense"] { --accent-color: var(--red); }
     .industry-card[data-industry="healthcare"] { --accent-color: var(--green); }
     .industry-card[data-industry="accounting"] { --accent-color: var(--blue); }
     .industry-card[data-industry="legal"] { --accent-color: var(--purple); }
@@ -1077,7 +1079,55 @@
       </p>
     </div>
 
-    <div class="industries-grid">
+   <div class="industries-grid">
+      <div class="industry-card" data-industry="aisecurity">
+        <div class="industry-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v1a3 3 0 0 0 0 6v1a3 3 0 0 0 6 0v-1a3 3 0 0 0 0-6V5a3 3 0 0 0-3-3z"></path><path d="M12 13v9"></path><path d="M9 22h6"></path><circle cx="6" cy="9" r="1"></circle><circle cx="18" cy="9" r="1"></circle></svg>
+        </div>
+        <h3 class="industry-name">AI Security</h3>
+        <p class="industry-desc">
+          Practical AI security and governance for SMBs adopting ChatGPT, Copilot, and AI tools — without creating compliance gaps.
+        </p>
+        <div class="industry-topics">
+          <span class="topic-tag">Shadow AI</span>
+          <span class="topic-tag">AI Governance</span>
+          <span class="topic-tag">Deepfakes</span>
+          <span class="topic-tag">EU AI Act</span>
+          <span class="topic-tag">NIST AI RMF</span>
+        </div>
+        <div class="industry-count">43+ Guides</div>
+        <a href="https://cyberzvi.gumroad.com/l/complete-ai-security-library" target="_blank" class="industry-cta">
+          View Bundle 
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="industry-card" data-industry="defense">
+        <div class="industry-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
+        </div>
+        <h3 class="industry-name">Defense / CMMC</h3>
+        <p class="industry-desc">
+          CMMC 2.0 and NIST 800-171 resources for small defense contractors and DIB suppliers preparing for Level 2 assessment.
+        </p>
+        <div class="industry-topics">
+          <span class="topic-tag">CMMC 2.0</span>
+          <span class="topic-tag">NIST 800-171</span>
+          <span class="topic-tag">CUI Handling</span>
+          <span class="topic-tag">SPRS Score</span>
+          <span class="topic-tag">DFARS</span>
+        </div>
+        <div class="industry-count">Workbook + 3 Books</div>
+        <a href="https://cyberzvi.gumroad.com/l/cmmc-workbook" target="_blank" class="industry-cta">
+          View Bundle 
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
       <div class="industry-card" data-industry="healthcare">
         <div class="industry-icon">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
@@ -1094,7 +1144,7 @@
           <span class="topic-tag">PHI Protection</span>
         </div>
         <div class="industry-count">20+ Documents</div>
-        <a href="#" class="industry-cta">
+        <a href="https://cyberzvi.gumroad.com/l/complete-healthcare-security-library" target="_blank" class="industry-cta">
           View Bundle 
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -1118,7 +1168,7 @@
           <span class="topic-tag">MFA Setup</span>
         </div>
         <div class="industry-count">20+ Documents</div>
-        <a href="#" class="industry-cta">
+        <a href="https://cyberzvi.gumroad.com/l/complete-cpa-security-library" target="_blank" class="industry-cta">
           View Bundle 
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -1142,7 +1192,7 @@
           <span class="topic-tag">Data Breach</span>
         </div>
         <div class="industry-count">20+ Documents</div>
-        <a href="#" class="industry-cta">
+        <a href="https://cyberzvi.gumroad.com/l/complete-law-firm-cybersecurity-library" target="_blank" class="industry-cta">
           View Bundle 
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -1166,7 +1216,7 @@
           <span class="topic-tag">BEC Defense</span>
         </div>
         <div class="industry-count">20+ Documents</div>
-        <a href="#" class="industry-cta">
+        <a href="https://cyberzvi.gumroad.com/l/wire-fraud-prevention-bundle-real-estate" target="_blank" class="industry-cta">
           View Bundle 
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -1190,7 +1240,7 @@
           <span class="topic-tag">Customer Data</span>
         </div>
         <div class="industry-count">20+ Documents</div>
-        <a href="#" class="industry-cta">
+        <a href="https://cyberzvi.gumroad.com/l/complete-saas-security-library-bundle" target="_blank" class="industry-cta">
           View Bundle 
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -1213,8 +1263,8 @@
           <span class="topic-tag">Kubernetes</span>
           <span class="topic-tag">Disaster Recovery</span>
         </div>
-        <div class="industry-count">17+ Guides</div>
-        <a href="#" class="industry-cta">
+        <div class="industry-count">20+ Guides</div>
+        <a href="https://cyberzvi.gumroad.com/l/complete-aws-cloud-library" target="_blank" class="industry-cta">
           View Bundle 
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M5 12h14M12 5l7 7-7 7"/>
