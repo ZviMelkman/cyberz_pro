@@ -123,7 +123,7 @@ The Trustworthy AI Security Engineering framework — developed by the Cloud Sec
 
 **Module 2** is shadow AI discovery: the systematic, ongoing process of finding the AI tools employees adopt on their own — before they become part of an attack chain.
 
-If you've read [Part 1 of this series]({% post_url 2026-05-13-what-ai-is-doing-inside-your-business %}), this incident is the worked example of why that framework matters. TAISE isn't academic. It's a checklist for not being Vercel's next case study.
+If you've read [Part 1 of this series]({% post_url 2026-04-14-shadow-ai-risks-small-business %}), this incident is the worked example of why that framework matters. TAISE isn't academic. It's a checklist for not being Vercel's next case study.
 
 ## The Bottom Line
 
