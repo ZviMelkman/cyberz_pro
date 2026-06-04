@@ -27,6 +27,8 @@ author: CyberZ
   <figcaption>The CMMC rollout in four phases. Phase 2 — when C3PAO certifications become a condition of award — is six months away.</figcaption>
 </figure>
 
+{% include cmmc-signup.html %}
+
 ## What Phase 2 Actually Changes
 
 On September 10, 2025, the Department of Defense published the final rule amending the DFARS to implement the Cybersecurity Maturity Model Certification program. 
