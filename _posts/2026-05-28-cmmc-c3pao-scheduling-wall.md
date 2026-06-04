@@ -36,6 +36,8 @@ If your DoD contracts will fall under Phase 2 requirements, the date you need to
 Readiness and a scheduled assessment are two separate deadlines. The first you control. The second you do not.
 </div>
 
+{% include cmmc-signup.html %}
+
 ## Why November 10, 2026 is a scheduling deadline, not just a compliance one
 
 A quick refresher on what changes. Phase 2 begins November 10, 2026, exactly one year after Phase 1, and under 32 CFR 170.3(e) it is the point at which mandatory Level 2 C3PAO certification assessments become standard for applicable solicitations and contracts. The shift is specific: where a contractor could previously self-attest to NIST SP 800-171 compliance and submit a score to the Supplier Performance Risk System (SPRS), Phase 2 makes self-attestation insufficient for contracts involving CUI. You now need an assessment conducted by a Certified Third-Party Assessment Organization.
