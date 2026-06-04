@@ -473,6 +473,16 @@
       gap: 1rem;
     }
 
+    /* Whole card clickable */
+    .industry-card { cursor: pointer; }
+
+    .industry-cta::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
     /* What's Included Section */
     .included {
       position: relative;
