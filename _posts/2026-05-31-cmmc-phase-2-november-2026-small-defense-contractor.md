@@ -15,6 +15,8 @@ This is a plain-English walkthrough of what changes on that date, who it actuall
 
 ![The CMMC phased rollout across four annual phases. Phase 1, November 2025: self-assessment. Phase 2, November 2026: C3PAO Level 2 certification. Phase 3, November 2027: Level 3 added. Phase 4, November 2028: all contracts. Phase 2 is the phase that ends self-assessment for CUI work.](/blog/images/cmmc-310526-phase-timeline.png)
 
+{% include cmmc-signup.html %}
+
 ## What Phase 2 actually changes
 
 CMMC (Cybersecurity Maturity Model Certification) is the Department of Defense's way of verifying that contractors actually protect the sensitive government information they handle. It rolls out in four annual phases, and November 10, 2026 is the start of Phase 2, not the finish line of anything.
