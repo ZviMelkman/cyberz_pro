@@ -24,8 +24,6 @@ author: CyberZ
   </ul>
 </div>
 
-![CyberZ graphic on a dark background reading "320 objectives. Not 110 controls." with the subtitle "What a C3PAO examines, interviews, and tests before it certifies you."](/blog/images/1-cmmc-evidence-checklist-c3pao-hero.png)
-
 Defense contractors are booking C3PAO assessments right now for the runway to November 10, 2026, when Phase 2 of the CMMC program makes third-party Level 2 assessments the default for contracts involving CUI under 32 CFR Part 170. In a June 2026 Federal News Network interview, the CEO of one large compliance provider described firms arriving six months out, asking to be certified by the deadline, and noted that subcontractors who assumed they were exempt, including sole-source suppliers, are not. The crunch is real, and it makes one question urgent for every contractor on a C3PAO's calendar: what, exactly, will the assessor ask to see?
 
 The answer is not a mystery. The entire assessment runs on a published NIST document, and you can read the test before you take it.
