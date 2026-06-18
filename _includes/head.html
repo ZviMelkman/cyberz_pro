@@ -4,6 +4,7 @@
 <!-- SEO -->
 <title>{% if page.title %}{{ page.title }} | CyberZ{% else %}CyberZ | Industry-Specific Cybersecurity Resources{% endif %}</title>
 <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
 
 <!-- Open Graph -->
 <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
