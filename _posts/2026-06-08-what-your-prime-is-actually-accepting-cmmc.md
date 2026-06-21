@@ -64,7 +64,7 @@ In the language defense subs are actually using in these threads, the acceptable
 
 The artifact that proves all of this is your **System Security Plan (SSP)**. The SSP is the document a prime's compliance officer reads, and the document a C3PAO opens first. It states your scope, describes how each control is implemented, and references your POA&M. A contractor who can hand over a current SSP and a posted SPRS score is demonstrably "moving" in a way the prime can put in their own risk file. A contractor who says "we're working on it" with nothing on paper is not.
 
-If you are building that SSP from a blank page, the [CMMC Level 2 System Security Plan (SSP) Template](https://payhip.com/b/gB6oD) ($77) gives you the structure assessors expect, with the control-by-control implementation language already laid out so you are editing rather than inventing.
+If you are building that SSP from a blank page, our [CMMC SSP template](/cmmc-ssp-template/) gives you the structure assessors expect, with the control-by-control implementation language already laid out so you are editing rather than inventing. It is $77, in Word and Excel.
 
 ## Conditional certification is the safety valve. Read the fine print.
 
