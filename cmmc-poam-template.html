@@ -1,0 +1,192 @@
+---
+layout: default
+title: "CMMC POA&M Template (Excel)"
+description: "A CMMC Level 2 POA&M template (Excel) built to 32 CFR 170.21: which gaps are POA&M-eligible, the 88 of 110 floor, and the 180-day closeout clock. $57."
+permalink: /cmmc-poam-template/
+---
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">CMMC POA&amp;M Template for NIST 800-171 (Excel)</h1>
+  </header>
+
+  <div class="post-content">
+
+    <p><em>The POA&amp;M is the last thing standing between a Conditional CMMC Status and a clean fail. Here is what 32 CFR 170.21 actually lets you defer, what it never will, and the Excel tracker practitioners use to build one an assessor accepts.</em></p>
+
+    <p>Under CMMC Level 2, a Plan of Action and Milestones (POA&amp;M) is not a place to park the controls you did not finish. <strong>32 CFR 170.21</strong> permits one only to reach a Conditional CMMC Status, only for requirements scored NOT MET, and only when three conditions hold at once: you already scored at least 88 of 110, nothing on the plan is worth more than 1 point, and none of six named requirements appear on it.</p>
+
+    <p>A blank POA&amp;M template does not know any of that. It gives you columns to fill in. It will happily let you list a 5-point control, or your System Security Plan, as a deferred item, and an assessor will reject the plan the moment they read it. The work is not the spreadsheet. It is knowing which gaps the rule allows you to defer before you walk into the assessment.</p>
+
+    <p>This page covers what a CMMC POA&amp;M is under 32 CFR 170.21, exactly what can and cannot go on one, what a real POA&amp;M row looks like, and the done-for-you Excel tracker that produces it.</p>
+
+    <h2>What a CMMC POA&amp;M actually is (32 CFR 170.21)</h2>
+
+    <p>A POA&amp;M is the documented, time-bound plan to close the security requirements an assessor scored NOT MET. Under <strong>32 CFR 170.21</strong> it has one function: it lets an Organization Seeking Assessment reach a Conditional CMMC Status instead of failing outright. It is not a substitute for implementing a control. Under the CMMC Scoring Methodology in 32 CFR 170.24, a requirement on a POA&amp;M is still scored NOT MET until it is closed.</p>
+
+    <p>A POA&amp;M is also not permitted at every level. For a Level 1 self-assessment, 32 CFR 170.21(a)(1) allows no POA&amp;M at all, and every requirement must be MET. The conditional path exists only at Level 2 and Level 3, and only under the conditions below.</p>
+
+    <p>For each NOT MET requirement, your plan documents the finding, the milestones to close it, the responsible party, and a completion date inside the 180-day window. That is the artifact an assessor reviews, and the one this template is built to produce.</p>
+
+    <h2>What can and cannot go on a CMMC POA&amp;M</h2>
+
+    <p>Section 170.21 runs two separate filters, and both have to pass.</p>
+
+    <p><strong>The point-value filter (170.21(a)(2)(ii)).</strong> Only requirements worth 1 point under the CMMC Scoring Methodology (32 CFR 170.24) are eligible. Every 3-point and 5-point requirement must be fully MET before the assessment. There is exactly one exception: SC.L2-3.13.11 (CUI Encryption) may go on a POA&amp;M if encryption is in use but not yet FIPS-validated, in which case it counts as a 3-point deduction rather than 5. If no encryption is in place at all, the exception does not apply and that single gap blocks certification.</p>
+
+    <p><strong>The named-exclusion filter (170.21(a)(2)(iii)).</strong> Six requirements are barred from a POA&amp;M by name, taken verbatim from the rule:</p>
+
+    <ul>
+      <li>AC.L2-3.1.20 External Connections</li>
+      <li>AC.L2-3.1.22 Control Public Information</li>
+      <li>CA.L2-3.12.4 System Security Plan</li>
+      <li>PE.L2-3.10.3 Escort Visitors</li>
+      <li>PE.L2-3.10.4 Physical Access Logs</li>
+      <li>PE.L2-3.10.5 Manage Physical Access</li>
+    </ul>
+
+    <p>These define and protect the CUI boundary: what connects to it, what information leaves it, who enters the spaces where it lives, and the document that describes the system. The System Security Plan (CA.L2-3.12.4) is the one to watch. Under 32 CFR 170.24, a missing or incomplete SSP does not just lose a point. It produces a finding that the assessment cannot be completed at all.</p>
+
+    <p><strong>The score floor (170.21(a)(2)(i)).</strong> Even with an eligible set of gaps, your assessment score divided by the total Level 2 requirements must be at least 0.8. With 110 requirements, that is a minimum of 88. A perfect score is 110, so your total deductions cannot exceed 22 points. Because every deferrable item is worth 1 point, that is a hard ceiling of 22 one-point gaps, or about 19 if you use the encryption exception. Cross it and no POA&amp;M qualifies you.</p>
+
+    <h2>Why a free or blank POA&amp;M template will not survive a C3PAO assessment</h2>
+
+    <p>Search "CMMC POA&amp;M template free download" and you will find spreadsheets with the right column headers. They are not wrong. They are just blank. A blank template encodes none of the rule:</p>
+
+    <ul>
+      <li>it does not stop you from listing a 3-point or 5-point control that can never be deferred</li>
+      <li>it does not flag the six named exclusions, including your SSP</li>
+      <li>it does not check your running total against the 88 of 110 floor</li>
+      <li>it does not tie each item to a 180-day closeout date</li>
+    </ul>
+
+    <p>An assessor reading a POA&amp;M that lists an ineligible requirement does not negotiate. The plan is rejected and the requirement stays NOT MET. The difference between a blank template and one an assessor accepts is the eligibility logic, and that is the part that takes the knowledge, not the formatting.</p>
+
+    <h2>What a real CMMC POA&amp;M row looks like</h2>
+
+    <p>A working POA&amp;M documents every NOT MET item in a consistent, eligibility-aware structure. Here is a single row as it appears in a finished plan:</p>
+
+    <div style="background:var(--card-bg);border:1px solid var(--card-border);border-left:3px solid var(--cyan);padding:1.25rem 1.5rem;margin:1.75rem 0;font-size:0.98rem;line-height:1.7;color:#d0d0d0;">
+      <strong style="color:var(--cyan);font-family:'Orbitron',sans-serif;font-size:0.9rem;letter-spacing:0.5px;">REQUIREMENT CM.L2-3.4.9 (1-POINT, POA&amp;M-ELIGIBLE)</strong><br>
+      Control and monitor user-installed software.<br><br>
+      <strong style="color:#fff;">Finding:</strong> NOT MET. Three in-scope workstations allow unrestricted software installation, with no monitoring of what users install.<br>
+      <strong style="color:#fff;">Point value:</strong> 1 (eligible under 32 CFR 170.21(a)(2)(ii))<br>
+      <strong style="color:#fff;">Milestones:</strong> (1) Enforce an application-control policy through the MDM to block unapproved installs. (2) Enable logging and alerting on installation attempts. (3) Validate across all in-scope endpoints.<br>
+      <strong style="color:#fff;">Responsible party:</strong> IT Lead<br>
+      <strong style="color:#fff;">Target completion:</strong> Day 45 of the 180-day closeout window<br>
+      <strong style="color:#fff;">Status:</strong> Open, on track
+    </div>
+
+    <p>Then multiply that by every NOT MET item, with the eligibility check, the running 88-point margin, and the 180-day dates handled for you. That structure is what the tracker provides.</p>
+
+    <h2>The CyberZ CMMC POA&amp;M Tracker (Excel)</h2>
+
+    <p>The CMMC Level 2 POA&amp;M Tracker for NIST 800-171 gives you the structured template pre-built: a row format mapped to control IDs, an eligibility check that flags any 3-point, 5-point, or named-exclusion item that cannot be deferred, a running margin against the 88 of 110 floor, and 180-day closeout dates calculated from your Conditional CMMC Status Date. You supply your findings. The rule is already wired in.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Free / blank template</th>
+          <th>CyberZ POA&amp;M Tracker ($57)</th>
+          <th>Consultant-built</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Eligibility logic (1-point filter, six exclusions)</td><td>No</td><td>Yes</td><td>Varies</td></tr>
+        <tr><td>88 of 110 margin check</td><td>No</td><td>Yes</td><td>Varies</td></tr>
+        <tr><td>180-day closeout dates tracked</td><td>No</td><td>Yes</td><td>Varies</td></tr>
+        <tr><td>Each item mapped to its control ID</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>You keep control of edits</td><td>Yes</td><td>Yes</td><td>Limited</td></tr>
+        <tr><td>Cost</td><td>$0</td><td>$57</td><td>Thousands</td></tr>
+      </tbody>
+    </table>
+
+    <div class="cta-box">
+      <h3>CMMC Level 2 POA&amp;M Tracker for NIST 800-171</h3>
+      <p>Built to 32 CFR 170.21: an eligibility check that flags non-deferrable controls, a running margin against the 88 of 110 floor, and 180-day closeout tracking. Excel.</p>
+      <a href="https://payhip.com/b/HTzXf" class="payhip-buy-button cta-button" data-product="HTzXf">Get the POA&amp;M Tracker ($57)</a>
+    </div>
+    <script src="https://payhip.com/payhip.js" type="text/javascript"></script>
+
+    <p>If you are assembling the whole assessment package before a C3PAO date, not just the POA&amp;M, the <a href="https://payhip.com/b/LutGC"><strong>CMMC Level 2 Readiness Kit: 5 NIST 800-171 Tools</strong></a> ($147) bundles this POA&amp;M tracker with the SSP template, SPRS score workbook, asset scoping worksheet, and evidence tracker. It is the scoped, scored, scheduled, and moving path in one set, for contractors who need the full readiness package rather than a single document.</p>
+
+    <h2>Frequently asked questions</h2>
+
+    <h3>What is a POA&amp;M in CMMC?</h3>
+    <p>A Plan of Action and Milestones is the documented, time-bound plan, defined under 32 CFR 170.21, to close security requirements scored NOT MET during a CMMC assessment. It lets an organization reach a Conditional CMMC Status rather than failing, but a requirement on a POA&amp;M is still scored NOT MET until it is closed.</p>
+
+    <h3>What can go on a CMMC POA&amp;M?</h3>
+    <p>Only requirements worth 1 point under the CMMC Scoring Methodology (32 CFR 170.24). Every 3-point and 5-point requirement must be MET before the assessment. The one exception is SC.L2-3.13.11 (CUI Encryption), which may be deferred at a 3-point cost if encryption is in use but not yet FIPS-validated.</p>
+
+    <h3>What requirements cannot go on a CMMC POA&amp;M?</h3>
+    <p>Beyond every 3-point and 5-point requirement, 32 CFR 170.21(a)(2)(iii) names six that are barred outright: AC.L2-3.1.20 External Connections, AC.L2-3.1.22 Control Public Information, CA.L2-3.12.4 System Security Plan, PE.L2-3.10.3 Escort Visitors, PE.L2-3.10.4 Physical Access Logs, and PE.L2-3.10.5 Manage Physical Access.</p>
+
+    <h3>What score do you need to use a POA&amp;M for CMMC Level 2?</h3>
+    <p>At least 88 of 110. Under 32 CFR 170.21(a)(2)(i), your assessment score divided by the total Level 2 requirements must be 0.8 or higher. Since a perfect score is 110, your deductions cannot exceed 22 points, which caps the gaps you can carry.</p>
+
+    <h3>How long do you have to close a CMMC POA&amp;M?</h3>
+    <p>180 days from the Conditional CMMC Status Date, under 32 CFR 170.21(b). The closure must be confirmed by a POA&amp;M closeout assessment, performed by an authorized or accredited C3PAO for a Level 2 certification. If it is not closed in time, the Conditional CMMC Status expires.</p>
+
+    <h3>Is a POA&amp;M the same as an Operational Plan of Action?</h3>
+    <p>No. Under the CMMC Final Rule a POA&amp;M is the post-assessment list of NOT MET items subject to the 180-day closeout. The Operational Plan of Action, used in CA.L2-3.12.2, is the ongoing artifact that tracks temporary deficiencies between assessments and carries no 180-day remediation clock.</p>
+
+  </div>
+</article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a POA&M in CMMC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Plan of Action and Milestones is the documented, time-bound plan, defined under 32 CFR 170.21, to close security requirements scored NOT MET during a CMMC assessment. It lets an organization reach a Conditional CMMC Status rather than failing, but a requirement on a POA&M is still scored NOT MET until it is closed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What can go on a CMMC POA&M?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only requirements worth 1 point under the CMMC Scoring Methodology (32 CFR 170.24). Every 3-point and 5-point requirement must be MET before the assessment. The one exception is SC.L2-3.13.11 (CUI Encryption), which may be deferred at a 3-point cost if encryption is in use but not yet FIPS-validated."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What requirements cannot go on a CMMC POA&M?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Beyond every 3-point and 5-point requirement, 32 CFR 170.21(a)(2)(iii) names six that are barred outright: AC.L2-3.1.20 External Connections, AC.L2-3.1.22 Control Public Information, CA.L2-3.12.4 System Security Plan, PE.L2-3.10.3 Escort Visitors, PE.L2-3.10.4 Physical Access Logs, and PE.L2-3.10.5 Manage Physical Access."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What score do you need to use a POA&M for CMMC Level 2?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At least 88 of 110. Under 32 CFR 170.21(a)(2)(i), your assessment score divided by the total Level 2 requirements must be 0.8 or higher. Since a perfect score is 110, your deductions cannot exceed 22 points, which caps the gaps you can carry."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long do you have to close a CMMC POA&M?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "180 days from the Conditional CMMC Status Date, under 32 CFR 170.21(b). The closure must be confirmed by a POA&M closeout assessment, performed by an authorized or accredited C3PAO for a Level 2 certification. If it is not closed in time, the Conditional CMMC Status expires."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a POA&M the same as an Operational Plan of Action?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Under the CMMC Final Rule a POA&M is the post-assessment list of NOT MET items subject to the 180-day closeout. The Operational Plan of Action, used in CA.L2-3.12.2, is the ongoing artifact that tracks temporary deficiencies between assessments and carries no 180-day remediation clock."
+      }
+    }
+  ]
+}
+</script>
