@@ -1,135 +1,129 @@
 ---
 layout: default
-title: "CMMC POA&M Template (Excel)"
-description: "A CMMC Level 2 POA&M template (Excel) built to 32 CFR 170.21: which gaps are POA&M-eligible, the 88 of 110 floor, and the 180-day closeout clock. $57."
-permalink: /cmmc-poam-template/
+title: "CMMC SSP Template (Word + Excel)"
+description: "A done-for-you CMMC Level 2 SSP template in Word and Excel, mapped to NIST 800-171 control 3.12.4 and what a C3PAO assessor actually reads. $77."
+permalink: /cmmc-ssp-template/
 ---
 
 <article class="post">
   <header class="post-header">
-    <h1 class="post-title">CMMC POA&amp;M Template for NIST 800-171 (Excel)</h1>
+    <h1 class="post-title">CMMC SSP Template for NIST 800-171 (Word + Excel)</h1>
   </header>
 
   <div class="post-content">
 
-    <p><em>The POA&amp;M is the last thing standing between a Conditional CMMC Status and a clean fail. Here is what 32 CFR 170.21 actually lets you defer, what it never will, and the Excel tracker practitioners use to build one an assessor accepts.</em></p>
+    <p><em>The System Security Plan is the first document a C3PAO reads, and the one most small contractors get wrong. Here is what NIST 800-171 control 3.12.4 requires, what an assessor looks for, and the template practitioners use to produce it.</em></p>
 
-    <p>Under CMMC Level 2, a Plan of Action and Milestones (POA&amp;M) is not a place to park the controls you did not finish. <strong>32 CFR 170.21</strong> permits one only to reach a Conditional CMMC Status, only for requirements scored NOT MET, and only when three conditions hold at once: you already scored at least 88 of 110, nothing on the plan is worth more than 1 point, and none of six named requirements appear on it.</p>
+    <p>Under CMMC Level 2, your System Security Plan (SSP) is not a formality. It is the document a Certified Third-Party Assessment Organization (C3PAO) opens first, and it is the map the assessor uses to plan and run the entire assessment. <strong>NIST SP 800-171 control 3.12.4</strong> requires you to develop, document, and keep current a plan that describes your system boundary, your operating environment, how each of the 110 security requirements is implemented, and how your system connects to others.</p>
 
-    <p>A blank POA&amp;M template does not know any of that. It gives you columns to fill in. It will happily let you list a 5-point control, or your System Security Plan, as a deferred item, and an assessor will reject the plan the moment they read it. The work is not the spreadsheet. It is knowing which gaps the rule allows you to defer before you walk into the assessment.</p>
+    <p>A blank template does not do that. The work is the mapping: 110 requirements, each with an implementation narrative specific to your environment. Most free SSP templates are empty shells. They give you headings, not the structure that holds up when an assessor cross-references your plan against the 320 assessment objectives in NIST SP 800-171A.</p>
 
-    <p>This page covers what a CMMC POA&amp;M is under 32 CFR 170.21, exactly what can and cannot go on one, what a real POA&amp;M row looks like, and the done-for-you Excel tracker that produces it.</p>
+    <p>This page covers what a compliant CMMC SSP contains, what the assessor reads, and the done-for-you template (Word + Excel) that produces one.</p>
 
-    <h2>What a CMMC POA&amp;M actually is (32 CFR 170.21)</h2>
+    <h2>What a CMMC SSP actually is (NIST 800-171 control 3.12.4)</h2>
 
-    <p>A POA&amp;M is the documented, time-bound plan to close the security requirements an assessor scored NOT MET. Under <strong>32 CFR 170.21</strong> it has one function: it lets an Organization Seeking Assessment reach a Conditional CMMC Status instead of failing outright. It is not a substitute for implementing a control. Under the CMMC Scoring Methodology in 32 CFR 170.24, a requirement on a POA&amp;M is still scored NOT MET until it is closed.</p>
+    <p>The SSP is the single document that describes how your organization meets <strong>NIST SP 800-171 Rev 2</strong>, the 110-requirement baseline that CMMC Level 2 is assessed against. (Rev 3 was published in 2024 but is not the CMMC assessment standard. See the FAQ.)</p>
 
-    <p>A POA&amp;M is also not permitted at every level. For a Level 1 self-assessment, 32 CFR 170.21(a)(1) allows no POA&amp;M at all, and every requirement must be MET. The conditional path exists only at Level 2 and Level 3, and only under the conditions below.</p>
-
-    <p>For each NOT MET requirement, your plan documents the finding, the milestones to close it, the responsible party, and a completion date inside the 180-day window. That is the artifact an assessor reviews, and the one this template is built to produce.</p>
-
-    <h2>What can and cannot go on a CMMC POA&amp;M</h2>
-
-    <p>Section 170.21 runs two separate filters, and both have to pass.</p>
-
-    <p><strong>The point-value filter (170.21(a)(2)(ii)).</strong> Only requirements worth 1 point under the CMMC Scoring Methodology (32 CFR 170.24) are eligible. Every 3-point and 5-point requirement must be fully MET before the assessment. There is exactly one exception: SC.L2-3.13.11 (CUI Encryption) may go on a POA&amp;M if encryption is in use but not yet FIPS-validated, in which case it counts as a 3-point deduction rather than 5. If no encryption is in place at all, the exception does not apply and that single gap blocks certification.</p>
-
-    <p><strong>The named-exclusion filter (170.21(a)(2)(iii)).</strong> Six requirements are barred from a POA&amp;M by name, taken verbatim from the rule:</p>
+    <p>Control 3.12.4 requires the plan to describe, at minimum:</p>
 
     <ul>
-      <li>AC.L2-3.1.20 External Connections</li>
-      <li>AC.L2-3.1.22 Control Public Information</li>
-      <li>CA.L2-3.12.4 System Security Plan</li>
-      <li>PE.L2-3.10.3 Escort Visitors</li>
-      <li>PE.L2-3.10.4 Physical Access Logs</li>
-      <li>PE.L2-3.10.5 Manage Physical Access</li>
+      <li>the system boundary (what is in scope, what is not)</li>
+      <li>the operational environment (where and how the system runs)</li>
+      <li>how each of the 110 requirements is implemented in your environment</li>
+      <li>the relationships and connections to other systems</li>
     </ul>
 
-    <p>These define and protect the CUI boundary: what connects to it, what information leaves it, who enters the spaces where it lives, and the document that describes the system. The System Security Plan (CA.L2-3.12.4) is the one to watch. Under 32 CFR 170.24, a missing or incomplete SSP does not just lose a point. It produces a finding that the assessment cannot be completed at all.</p>
+    <p>This is not optional paperwork. DFARS clause 252.204-7012 obligates you to safeguard Controlled Unclassified Information per NIST 800-171, and clauses 252.204-7019 and 7020 require a current Supplier Performance Risk System (SPRS) score. You cannot honestly produce that score without an SSP that documents your actual state.</p>
 
-    <p><strong>The score floor (170.21(a)(2)(i)).</strong> Even with an eligible set of gaps, your assessment score divided by the total Level 2 requirements must be at least 0.8. With 110 requirements, that is a minimum of 88. A perfect score is 110, so your total deductions cannot exceed 22 points. Because every deferrable item is worth 1 point, that is a hard ceiling of 22 one-point gaps, or about 19 if you use the encryption exception. Cross it and no POA&amp;M qualifies you.</p>
+    <h2>What a C3PAO assessor reads in your SSP</h2>
 
-    <h2>Why a free or blank POA&amp;M template will not survive a C3PAO assessment</h2>
-
-    <p>Search "CMMC POA&amp;M template free download" and you will find spreadsheets with the right column headers. They are not wrong. They are just blank. A blank template encodes none of the rule:</p>
+    <p>A Level 2 assessment is conducted against NIST SP 800-171A, which breaks the 110 requirements into 320 assessment objectives evaluated by three methods: examine, interview, and test. The assessor uses your SSP to:</p>
 
     <ul>
-      <li>it does not stop you from listing a 3-point or 5-point control that can never be deferred</li>
-      <li>it does not flag the six named exclusions, including your SSP</li>
-      <li>it does not check your running total against the 88 of 110 floor</li>
-      <li>it does not tie each item to a 180-day closeout date</li>
+      <li>scope the assessment (your documented boundary defines what gets assessed)</li>
+      <li>locate the evidence for each objective (your implementation narratives point to it)</li>
+      <li>decide MET or NOT MET on each of the 320 objectives</li>
     </ul>
 
-    <p>An assessor reading a POA&amp;M that lists an ineligible requirement does not negotiate. The plan is rejected and the requirement stays NOT MET. The difference between a blank template and one an assessor accepts is the eligibility logic, and that is the part that takes the knowledge, not the formatting.</p>
+    <p>If your SSP claims a control is implemented but the narrative is vague or the evidence does not exist, that objective comes back NOT MET. An SSP that overstates your posture is also the exact gap that creates False Claims Act exposure, because your SPRS score is built from what the SSP claims. As Phase 2 third-party assessments roll out (beginning November 10, 2026 under 32 CFR Part 170), the SSP stops being an internal document and becomes the thing an external assessor grades you on.</p>
 
-    <h2>What a real CMMC POA&amp;M row looks like</h2>
+    <h2>Why a free or blank SSP template will not survive an assessment</h2>
 
-    <p>A working POA&amp;M documents every NOT MET item in a consistent, eligibility-aware structure. Here is a single row as it appears in a finished plan:</p>
+    <p>Search "CMMC SSP template free download" and you will find blank shells. They are not wrong. They are just empty. The difference between a blank template and a passing SSP is the part that takes the time:</p>
+
+    <ul>
+      <li>mapping all 110 requirements to your actual systems, not generic boilerplate</li>
+      <li>writing implementation narratives an assessor can trace to real evidence</li>
+      <li>documenting the boundary and connections precisely enough to scope cleanly</li>
+    </ul>
+
+    <p>A blank Word doc gives you none of that structure. An enterprise GRC platform gives you far more than a 12-person shop needs, at a price to match. What works for a small contractor is a structured, pre-built template that already maps the 110 requirements and prompts you for the specifics only you can supply.</p>
+
+    <h2>What a real CMMC SSP entry looks like</h2>
+
+    <p>A complete SSP documents all 110 requirements in a consistent structure. Here is a single requirement as it appears in a finished plan, one of 110:</p>
 
     <div style="background:var(--card-bg);border:1px solid var(--card-border);border-left:3px solid var(--cyan);padding:1.25rem 1.5rem;margin:1.75rem 0;font-size:0.98rem;line-height:1.7;color:#d0d0d0;">
-      <strong style="color:var(--cyan);font-family:'Orbitron',sans-serif;font-size:0.9rem;letter-spacing:0.5px;">REQUIREMENT CM.L2-3.4.9 (1-POINT, POA&amp;M-ELIGIBLE)</strong><br>
-      Control and monitor user-installed software.<br><br>
-      <strong style="color:#fff;">Finding:</strong> NOT MET. Three in-scope workstations allow unrestricted software installation, with no monitoring of what users install.<br>
-      <strong style="color:#fff;">Point value:</strong> 1 (eligible under 32 CFR 170.21(a)(2)(ii))<br>
-      <strong style="color:#fff;">Milestones:</strong> (1) Enforce an application-control policy through the MDM to block unapproved installs. (2) Enable logging and alerting on installation attempts. (3) Validate across all in-scope endpoints.<br>
-      <strong style="color:#fff;">Responsible party:</strong> IT Lead<br>
-      <strong style="color:#fff;">Target completion:</strong> Day 45 of the 180-day closeout window<br>
-      <strong style="color:#fff;">Status:</strong> Open, on track
+      <strong style="color:var(--cyan);font-family:'Orbitron',sans-serif;font-size:0.9rem;letter-spacing:0.5px;">REQUIREMENT 3.1.1 (AC.L2-3.1.1)</strong><br>
+      Limit system access to authorized users, processes acting on behalf of authorized users, and devices.<br><br>
+      <strong style="color:#fff;">Implementation status:</strong> Implemented<br>
+      <strong style="color:#fff;">Responsibility:</strong> Contractor<br>
+      <strong style="color:#fff;">Implementation narrative:</strong> Access to the in-scope system is limited to named users provisioned through the organization identity provider. Accounts are role-based, reviewed quarterly, and disabled within a defined window of personnel separation. Device access is restricted to enrolled, compliant endpoints managed through the organization MDM. Service accounts are recorded in the asset inventory and limited to least privilege.<br>
+      <strong style="color:#fff;">Evidence:</strong> identity provider user and role export, quarterly access review records, MDM enrollment report, offboarding tickets.
     </div>
 
-    <p>Then multiply that by every NOT MET item, with the eligibility check, the running 88-point margin, and the 180-day dates handled for you. That structure is what the tracker provides.</p>
+    <p>Now multiply that by 110, in a structure an assessor can move through quickly. That structure is what the template provides.</p>
 
-    <h2>The CyberZ CMMC POA&amp;M Tracker (Excel)</h2>
+    <h2>The CyberZ CMMC SSP Template (Word + Excel)</h2>
 
-    <p>The CMMC Level 2 POA&amp;M Tracker for NIST 800-171 gives you the structured template pre-built: a row format mapped to control IDs, an eligibility check that flags any 3-point, 5-point, or named-exclusion item that cannot be deferred, a running margin against the 88 of 110 floor, and 180-day closeout dates calculated from your Conditional CMMC Status Date. You supply your findings. The rule is already wired in.</p>
+    <p>The CMMC Level 2 System Security Plan (SSP) Template gives you the full structure pre-built: all 110 NIST 800-171 Rev 2 requirements laid out with implementation-status fields, responsibility assignment, narrative prompts, and an evidence column. Word holds the narrative document an assessor reads; Excel holds the tracking view you work from. You supply your environment. The framework is done.</p>
 
     <table>
       <thead>
         <tr>
           <th></th>
           <th>Free / blank template</th>
-          <th>CyberZ POA&amp;M Tracker ($57)</th>
+          <th>CyberZ SSP Template ($77)</th>
           <th>Consultant-built</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td>Eligibility logic (1-point filter, six exclusions)</td><td>No</td><td>Yes</td><td>Varies</td></tr>
-        <tr><td>88 of 110 margin check</td><td>No</td><td>Yes</td><td>Varies</td></tr>
-        <tr><td>180-day closeout dates tracked</td><td>No</td><td>Yes</td><td>Varies</td></tr>
-        <tr><td>Each item mapped to its control ID</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>110 requirements pre-mapped</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>Implementation narrative prompts</td><td>No</td><td>Yes</td><td>Varies</td></tr>
+        <tr><td>Evidence tracking (Excel)</td><td>No</td><td>Yes</td><td>Varies</td></tr>
         <tr><td>You keep control of edits</td><td>Yes</td><td>Yes</td><td>Limited</td></tr>
-        <tr><td>Cost</td><td>$0</td><td>$57</td><td>Thousands</td></tr>
+        <tr><td>Cost</td><td>$0</td><td>$77</td><td>Thousands</td></tr>
       </tbody>
     </table>
 
     <div class="cta-box">
-      <h3>CMMC Level 2 POA&amp;M Tracker for NIST 800-171</h3>
-      <p>Built to 32 CFR 170.21: an eligibility check that flags non-deferrable controls, a running margin against the 88 of 110 floor, and 180-day closeout tracking. Excel.</p>
-      <a href="https://payhip.com/b/HTzXf" class="payhip-buy-button cta-button" data-product="HTzXf">Get the POA&amp;M Tracker ($57)</a>
+      <h3>CMMC Level 2 System Security Plan (SSP) Template</h3>
+      <p>All 110 NIST 800-171 Rev 2 requirements pre-mapped, with implementation-status fields, responsibility assignment, narrative prompts, and evidence tracking. Word + Excel.</p>
+      <a href="https://payhip.com/b/gB6oD" class="payhip-buy-button cta-button" data-product="gB6oD">Get the SSP Template ($77)</a>
     </div>
     <script src="https://payhip.com/payhip.js" type="text/javascript"></script>
 
-    <p>If you are assembling the whole assessment package before a C3PAO date, not just the POA&amp;M, the <a href="https://payhip.com/b/LutGC"><strong>CMMC Level 2 Readiness Kit: 5 NIST 800-171 Tools</strong></a> ($147) bundles this POA&amp;M tracker with the SSP template, SPRS score workbook, asset scoping worksheet, and evidence tracker. It is the scoped, scored, scheduled, and moving path in one set, for contractors who need the full readiness package rather than a single document.</p>
+    <p>If you are assembling the whole assessment package before a C3PAO date, not just the SSP, the <a href="https://payhip.com/b/LutGC"><strong>CMMC Level 2 Readiness Kit: 5 NIST 800-171 Tools</strong></a> ($147) bundles this SSP template with the SPRS score workbook, asset scoping worksheet, evidence tracker, and POA&amp;M tracker. It is the scoped, scored, scheduled, and moving path in one set, for contractors who need the full readiness package rather than a single document.</p>
 
     <h2>Frequently asked questions</h2>
 
-    <h3>What is a POA&amp;M in CMMC?</h3>
-    <p>A Plan of Action and Milestones is the documented, time-bound plan, defined under 32 CFR 170.21, to close security requirements scored NOT MET during a CMMC assessment. It lets an organization reach a Conditional CMMC Status rather than failing, but a requirement on a POA&amp;M is still scored NOT MET until it is closed.</p>
+    <h3>What is an SSP in CMMC?</h3>
+    <p>A System Security Plan is the document required by NIST SP 800-171 control 3.12.4 that describes your system boundary, your operating environment, and how you implement each of the 110 Level 2 security requirements. It is the primary document a C3PAO assessor reviews.</p>
 
-    <h3>What can go on a CMMC POA&amp;M?</h3>
-    <p>Only requirements worth 1 point under the CMMC Scoring Methodology (32 CFR 170.24). Every 3-point and 5-point requirement must be MET before the assessment. The one exception is SC.L2-3.13.11 (CUI Encryption), which may be deferred at a 3-point cost if encryption is in use but not yet FIPS-validated.</p>
+    <h3>Is an SSP required for CMMC Level 2?</h3>
+    <p>Yes. The SSP is a required artifact. You cannot produce an accurate SPRS score (required by DFARS 252.204-7019 and 7020) or undergo a Level 2 assessment without one, and a missing SSP is treated as a fundamental gap.</p>
 
-    <h3>What requirements cannot go on a CMMC POA&amp;M?</h3>
-    <p>Beyond every 3-point and 5-point requirement, 32 CFR 170.21(a)(2)(iii) names six that are barred outright: AC.L2-3.1.20 External Connections, AC.L2-3.1.22 Control Public Information, CA.L2-3.12.4 System Security Plan, PE.L2-3.10.3 Escort Visitors, PE.L2-3.10.4 Physical Access Logs, and PE.L2-3.10.5 Manage Physical Access.</p>
+    <h3>What should a CMMC SSP include?</h3>
+    <p>Your system boundary and scope, the operational environment, an implementation narrative for each of the 110 NIST 800-171 Rev 2 requirements, the responsibility for each, the location of supporting evidence, and the connections to other systems.</p>
 
-    <h3>What score do you need to use a POA&amp;M for CMMC Level 2?</h3>
-    <p>At least 88 of 110. Under 32 CFR 170.21(a)(2)(i), your assessment score divided by the total Level 2 requirements must be 0.8 or higher. Since a perfect score is 110, your deductions cannot exceed 22 points, which caps the gaps you can carry.</p>
+    <h3>Who writes the SSP for CMMC?</h3>
+    <p>The contractor owns and maintains the SSP. It can be drafted internally, with a template, or with a consultant, but the organization is responsible for its accuracy, because both the SPRS score and the C3PAO assessment rely on it.</p>
 
-    <h3>How long do you have to close a CMMC POA&amp;M?</h3>
-    <p>180 days from the Conditional CMMC Status Date, under 32 CFR 170.21(b). The closure must be confirmed by a POA&amp;M closeout assessment, performed by an authorized or accredited C3PAO for a Level 2 certification. If it is not closed in time, the Conditional CMMC Status expires.</p>
+    <h3>Can I use a free CMMC SSP template?</h3>
+    <p>A free template can give you the headings, but not the mapped structure or the implementation detail an assessor checks against the 320 objectives in NIST SP 800-171A. The work is the content, not the blank document.</p>
 
-    <h3>Is a POA&amp;M the same as an Operational Plan of Action?</h3>
-    <p>No. Under the CMMC Final Rule a POA&amp;M is the post-assessment list of NOT MET items subject to the 180-day closeout. The Operational Plan of Action, used in CA.L2-3.12.2, is the ongoing artifact that tracks temporary deficiencies between assessments and carries no 180-day remediation clock.</p>
+    <h3>Is the CMMC SSP based on NIST 800-171 Rev 2 or Rev 3?</h3>
+    <p>Rev 2. CMMC Level 2 is assessed against NIST SP 800-171 Rev 2 (110 requirements) under a current DoD class deviation. NIST published Rev 3 in 2024, but it is not yet the CMMC assessment baseline and no transition date has been set.</p>
 
   </div>
 </article>
@@ -141,50 +135,50 @@ permalink: /cmmc-poam-template/
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is a POA&M in CMMC?",
+      "name": "What is an SSP in CMMC?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A Plan of Action and Milestones is the documented, time-bound plan, defined under 32 CFR 170.21, to close security requirements scored NOT MET during a CMMC assessment. It lets an organization reach a Conditional CMMC Status rather than failing, but a requirement on a POA&M is still scored NOT MET until it is closed."
+        "text": "A System Security Plan is the document required by NIST SP 800-171 control 3.12.4 that describes your system boundary, operating environment, and how you implement each of the 110 Level 2 security requirements. It is the primary document a C3PAO assessor reviews."
       }
     },
     {
       "@type": "Question",
-      "name": "What can go on a CMMC POA&M?",
+      "name": "Is an SSP required for CMMC Level 2?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Only requirements worth 1 point under the CMMC Scoring Methodology (32 CFR 170.24). Every 3-point and 5-point requirement must be MET before the assessment. The one exception is SC.L2-3.13.11 (CUI Encryption), which may be deferred at a 3-point cost if encryption is in use but not yet FIPS-validated."
+        "text": "Yes. The SSP is a required artifact. You cannot produce an accurate SPRS score (required by DFARS 252.204-7019 and 7020) or undergo a Level 2 assessment without one, and a missing SSP is treated as a fundamental gap."
       }
     },
     {
       "@type": "Question",
-      "name": "What requirements cannot go on a CMMC POA&M?",
+      "name": "What should a CMMC SSP include?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Beyond every 3-point and 5-point requirement, 32 CFR 170.21(a)(2)(iii) names six that are barred outright: AC.L2-3.1.20 External Connections, AC.L2-3.1.22 Control Public Information, CA.L2-3.12.4 System Security Plan, PE.L2-3.10.3 Escort Visitors, PE.L2-3.10.4 Physical Access Logs, and PE.L2-3.10.5 Manage Physical Access."
+        "text": "Your system boundary and scope, the operational environment, an implementation narrative for each of the 110 NIST 800-171 Rev 2 requirements, the responsibility for each, the location of supporting evidence, and the connections to other systems."
       }
     },
     {
       "@type": "Question",
-      "name": "What score do you need to use a POA&M for CMMC Level 2?",
+      "name": "Who writes the SSP for CMMC?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "At least 88 of 110. Under 32 CFR 170.21(a)(2)(i), your assessment score divided by the total Level 2 requirements must be 0.8 or higher. Since a perfect score is 110, your deductions cannot exceed 22 points, which caps the gaps you can carry."
+        "text": "The contractor owns and maintains the SSP. It can be drafted internally, with a template, or with a consultant, but the organization is responsible for its accuracy, because both the SPRS score and the C3PAO assessment rely on it."
       }
     },
     {
       "@type": "Question",
-      "name": "How long do you have to close a CMMC POA&M?",
+      "name": "Can I use a free CMMC SSP template?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "180 days from the Conditional CMMC Status Date, under 32 CFR 170.21(b). The closure must be confirmed by a POA&M closeout assessment, performed by an authorized or accredited C3PAO for a Level 2 certification. If it is not closed in time, the Conditional CMMC Status expires."
+        "text": "A free template can give you the headings, but not the mapped structure or the implementation detail an assessor checks against the 320 objectives in NIST SP 800-171A. The work is the content, not the blank document."
       }
     },
     {
       "@type": "Question",
-      "name": "Is a POA&M the same as an Operational Plan of Action?",
+      "name": "Is the CMMC SSP based on NIST 800-171 Rev 2 or Rev 3?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Under the CMMC Final Rule a POA&M is the post-assessment list of NOT MET items subject to the 180-day closeout. The Operational Plan of Action, used in CA.L2-3.12.2, is the ongoing artifact that tracks temporary deficiencies between assessments and carries no 180-day remediation clock."
+        "text": "Rev 2. CMMC Level 2 is assessed against NIST SP 800-171 Rev 2 (110 requirements) under a current DoD class deviation. NIST published Rev 3 in 2024, but it is not yet the CMMC assessment baseline and no transition date has been set."
       }
     }
   ]
