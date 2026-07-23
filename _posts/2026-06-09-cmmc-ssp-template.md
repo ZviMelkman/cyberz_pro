@@ -7,6 +7,8 @@ category: cmmc
 tags: [cmmc, nist-800-171, ssp, dfars, compliance]
 image: /blog/images/1-cmmc-ssp-template-hero.png
 author: CyberZ
+redirect_from:
+  - /blog/2026/06/05/cmmc-ssp-template/
 ---
 
 ![The CMMC SSP an assessor actually reads](/blog/images/1-cmmc-ssp-template-hero.png)
