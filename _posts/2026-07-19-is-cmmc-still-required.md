@@ -38,7 +38,7 @@ The suspension announcement itself states that Phase 1 self-assessment requireme
 
 ![What the July 13 suspension paused versus what remains in force](/blog/images/2-cmmc-suspension-paused-vs-still-in-force.png)
 
-**Level 1 and Level 2 self-assessments.** If your contracts include the CMMC clause, the self-assessment requirement that took effect in November 2025 continues. Level 2 self-assessment still means all 110 NIST SP 800-171 Rev 2 requirements, assessed against the objectives in 800-171A. The full breakdown of who qualifies and what the self-assessment involves is in our [CMMC Level 2 self-assessment requirements guide]({% raw %}{% post_url 2026-07-07-cmmc-level-2-self-assessment-requirements %}{% endraw %}).
+**Level 1 and Level 2 self-assessments.** If your contracts include the CMMC clause, the self-assessment requirement that took effect in November 2025 continues. Level 2 self-assessment still means all 110 NIST SP 800-171 Rev 2 requirements, assessed against the objectives in 800-171A. The full breakdown of who qualifies and what the self-assessment involves is in our [CMMC Level 2 self-assessment requirements guide]({% post_url 2026-07-07-cmmc-level-2-self-assessment-requirements %}).
 
 **SPRS score submission.** DFARS 252.204-7019 and 252.204-7020 require a current NIST 800-171 assessment score in the Supplier Performance Risk System before award and throughout performance. These clauses predate the CMMC phases and were not touched by the suspension.
 
@@ -46,7 +46,7 @@ The suspension announcement itself states that Phase 1 self-assessment requireme
 
 **FAR 52.204-21.** The 15 basic safeguarding requirements for federal contract information apply to essentially every federal contractor, defense or otherwise. No connection to CMMC phases.
 
-**Annual affirmations.** Where the CMMC clause is in your contract, a senior official continues to affirm continuing compliance annually in SPRS. That affirmation carries personal exposure, which we covered in [who signs your CMMC affirmation is personally on the hook]({% raw %}{% post_url 2026-06-18-cmmc-affirming-official-personal-liability %}{% endraw %}).
+**Annual affirmations.** Where the CMMC clause is in your contract, a senior official continues to affirm continuing compliance annually in SPRS. That affirmation carries personal exposure, which we covered in [who signs your CMMC affirmation is personally on the hook]({% post_url 2026-06-18-cmmc-affirming-official-personal-liability %}).
 
 The pattern is simple. What was suspended is the third-party verification layer. What remains is the obligation itself, verified by your own signature instead of an assessor's.
 
@@ -58,7 +58,7 @@ The Department of Justice's Civil Cyber-Fraud Initiative pursues False Claims Ac
 
 Every element of that case survives the suspension intact. The clauses requiring the score are in force. The affirmation is in force. The FCA is a statute, 31 U.S.C. 3729, that no DoD memo can pause. If anything, the suspension raises the relative weight of your self-assessment, because for the duration of the review it is the only assessment DoD has. The department said it will continue enforcing NIST 800-171 through self-assessments and select government-led assessments.
 
-So the question for the next 60 days is not "is CMMC dead." It is "can I defend the number my company has posted in SPRS." If you have not scored yourself against the DoD Assessment Methodology recently, or the score in SPRS predates changes to your environment, that gap is your real exposure. How the scoring works, weight by weight, is in [how your NIST 800-171 SPRS score is calculated]({% raw %}{% post_url 2026-06-19-how-nist-800-171-sprs-score-calculated %}{% endraw %}). The [NIST 800-171 SPRS Score Workbook for CMMC Level 2](https://payhip.com/b/R5g4Y) ($87) walks all 110 controls with assessor-style scoring so the number you attest to is one you can defend.
+So the question for the next 60 days is not "is CMMC dead." It is "can I defend the number my company has posted in SPRS." If you have not scored yourself against the DoD Assessment Methodology recently, or the score in SPRS predates changes to your environment, that gap is your real exposure. How the scoring works, weight by weight, is in [how your NIST 800-171 SPRS score is calculated]({% post_url 2026-06-19-how-nist-800-171-sprs-score-calculated %}). The [NIST 800-171 SPRS Score Workbook for CMMC Level 2](https://payhip.com/b/R5g4Y) ($87) walks all 110 controls with assessor-style scoring so the number you attest to is one you can defend.
 
 ## The 60-Day Review: What Happens Between Now and September
 
