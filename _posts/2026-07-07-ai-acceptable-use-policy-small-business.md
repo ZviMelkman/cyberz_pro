@@ -2,6 +2,7 @@
 layout: post
 title: "AI Acceptable Use Policy: What a Small Business Actually Needs in 2026"
 date: 2026-07-07
+category: AI Security
 image: /blog/images/1-ai-acceptable-use-policy-hero.png
 description: "What an AI acceptable use policy must cover for a small business: approved tools, four data classes, incident reporting, and a one-session rollout plan."
 ---
