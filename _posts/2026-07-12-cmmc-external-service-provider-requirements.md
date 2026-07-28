@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "CMMC External Service Provider Requirements: Does Your MSP Need to Be Certified?"
+category: CMMC
 description: "Your MSP does not need its own CMMC certification, but its services get assessed inside your assessment. What 32 CFR 170 requires of ESPs, CSPs, and the contractors who hire them."
 image: /blog/images/1-cmmc-external-service-provider-hero.png
 ---
