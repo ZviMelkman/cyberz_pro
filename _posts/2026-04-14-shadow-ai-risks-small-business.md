@@ -3,9 +3,9 @@ layout: post
 title: "What AI Is Actually Doing Inside Your Business — And Why It's a Security Problem"
 date: 2026-04-14
 description: "98% of organizations have employees using unauthorized AI tools. Shadow AI creates compliance risks for healthcare, legal, and accounting firms that most small businesses don't see coming."
-category: GENERAL
-tags: [shadow AI, AI security, compliance, small business, HIPAA, data privacy]
-image: /blog/images/1-140426-shadow-ai-hero.png
+category: AI Security
+tags: [AI security, shadow AI, HIPAA, compliance, small business]
+image: /blog/images/2026-04-14-shadow-ai-hero.png
 author: CyberZ
 ---
 
