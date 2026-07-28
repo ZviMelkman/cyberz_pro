@@ -3,6 +3,7 @@ layout: post
 title: "Is CMMC Still Required? What the Phase 2 Suspension Did and Did Not Change"
 description: "DoD suspended CMMC Phase 2 on July 13, 2026. Self-assessments, SPRS scores, and DFARS 7012 remain fully in force. What a small defense contractor should do now."
 image: /blog/images/1-is-cmmc-still-required-hero.png
+category: CMMC
 ---
 
 *The Department of War suspended CMMC Phase 2 on July 13. Within a day, the question in every small contractor's inbox changed from "how do we get ready for November 10" to "do we still have to do any of this." The short answer is yes. Here is the longer answer, with the exact rules that still apply.*
