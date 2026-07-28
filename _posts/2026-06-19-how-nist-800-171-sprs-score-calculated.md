@@ -3,6 +3,7 @@ layout: post
 title: "How Your NIST 800-171 SPRS Score Is Calculated (and What It Legally Commits You To)"
 date: 2026-06-19
 image: /blog/images/1-sprs-score-legal-statement-hero.png
+category: CMMC
 description: "How the DoD calculates a NIST 800-171 SPRS score, why it ranges from 110 down to minus 203, and what certifying that number legally commits a defense contractor to."
 ---
 
