@@ -3,7 +3,7 @@ layout: post
 title: "The $2M Lesson From Vercel: How One AI Chrome Extension Became a Supply Chain Breach"
 date: 2026-05-14
 description: "On April 19, 2026, a single OAuth grant to an AI Chrome extension cost Vercel a $2M stolen database. Here's the shadow AI playbook every SMB needs to run this week."
-category: GENERAL
+category: AI Security
 tags: [shadow AI, AI security, OAuth, supply chain, Vercel, Context AI, SMB, breach]
 image: /blog/images/2-140526-vercel-context-ai-hero.png
 author: CyberZ
