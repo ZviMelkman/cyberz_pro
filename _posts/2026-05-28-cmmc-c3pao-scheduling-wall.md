@@ -2,9 +2,9 @@
 layout: post
 title: "You Can Be CMMC-Ready and Still Lose the Contract: The C3PAO Scheduling Wall Facing Defense Contractors in 2026"
 date: 2026-05-28
-categories: [cmmc, defense-contractors]
 tags: [CMMC, C3PAO, NIST 800-171, Phase 2, DoD]
 description: "Readiness is only half the CMMC Phase 2 deadline. With ~759 assessors for tens of thousands of contractors and booking 6 to 9 months out, the assessor's calendar is the deadline that decides your eligibility."
+category: CMMC
 ---
 
 <style>
