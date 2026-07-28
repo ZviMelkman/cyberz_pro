@@ -3,7 +3,7 @@ layout: post
 title: "CMMC Phase 2 Explained: What November 10, 2026 Actually Means for a Small Defense Contractor"
 date: 2026-05-31
 description: "November 10, 2026 starts CMMC Phase 2, but it isn't a universal deadline. Here's what it actually means for small defense contractors, and what to do now."
-category: GENERAL
+category: CMMC
 tags: [CMMC, NIST 800-171, defense contractors, compliance, SPRS, small business, False Claims Act]
 image: /blog/images/cmmc-310526-phase-timeline.png
 author: CyberZ
