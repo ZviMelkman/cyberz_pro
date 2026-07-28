@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "NIST 800-171 Rev 2 or Rev 3 for CMMC? What the July 2026 Interim Rule Changes"
+category: CMMC
 description: "DoD's regulatory agenda shows an interim final rule this month setting the NIST 800-171 Rev 3 transition deadline. Here is what changes for CMMC Level 2, and why your assessment baseline is still Rev 2."
 image: /blog/images/1-nist-800-171-rev-3-cmmc-transition-hero.png
 ---
