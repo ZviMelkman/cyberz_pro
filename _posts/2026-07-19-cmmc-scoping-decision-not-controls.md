@@ -89,9 +89,9 @@ CMMC Level 2 gives every contractor the same 110 controls. It does not give ever
 
 ---
 
-*Scoping starts with an honest asset inventory. The [CMMC Level 2 Asset Scoping Worksheet]([PAYHIP LINK — Asset Scoping Worksheet $47]) walks every asset through the five 32 CFR 170.19 categories and flags what your SSP and network diagram are still missing.*
+*Scoping starts with an honest asset inventory. The [CMMC Level 2 Asset Scoping Worksheet for NIST 800-171](https://payhip.com/b/2nzjO) ($47) walks every asset through the five 32 CFR 170.19 categories and flags what your SSP and network diagram are still missing.*
 
-*If you are building the full readiness path, the [CMMC Level 2 Readiness Kit]([PAYHIP LINK — Readiness Kit $147]) bundles the scoping worksheet with the SSP template, POA&M tracker, and evidence tracker, the scoped-scored-scheduled sequence in one place. It is built for the small contractor running this without a dedicated compliance team.*
+*If you are building the full readiness path, the [CMMC Level 2 Readiness Kit: 5 NIST 800-171 Tools](https://payhip.com/b/LutGC) ($147) bundles the scoping worksheet with the SSP template, POA&M tracker, and evidence tracker, the scoped-scored-scheduled sequence in one place. It is built for the small contractor running this without a dedicated compliance team.*
 
 *Want the control set itself as a reference? The [NIST 800-171 Quick-Reference Checklist](https://cyberzvi.gumroad.com/l/nist-800-171-checklist) covers all 110 controls across the 14 families for $29.*
 
