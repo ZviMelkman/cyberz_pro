@@ -5,13 +5,20 @@ description: Cybersecurity insights, breach analysis, and practical guides for s
 ---
 <style>
   .blog-page { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 80px 24px 60px; }
-  .blog-page-header { text-align: center; margin-bottom: 24px; }
+  .blog-page-header { text-align: center; margin-bottom: 20px; }
   .blog-page-header .tag { font-family: 'Space Mono', monospace; font-size: 11px; color: var(--cyan); letter-spacing: .1em; display: block; margin-bottom: 6px; }
   .blog-page-header h1 { font-family: 'Orbitron', sans-serif; font-weight: 800; font-size: clamp(18px,2.5vw,28px); color: #fff; margin-bottom: 6px; }
   .blog-page-header p { font-size: 14px; color: var(--text-secondary); }
+
+  .cat-filter { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 0 0 26px; }
+  .cat-chip { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: .07em; text-transform: uppercase; background: transparent; color: var(--text-secondary); border: 1px solid var(--card-border); padding: 5px 12px; border-radius: 3px; cursor: pointer; transition: all .2s; }
+  .cat-chip:hover { color: #fff; border-color: var(--text-secondary); }
+  .cat-chip.active { color: var(--dark-bg); background: var(--cyan); border-color: var(--cyan); }
+
   .posts-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
   .post-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; overflow: hidden; text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: border-color .2s, transform .2s; }
   .post-card:hover { border-color: var(--cyan); transform: translateY(-2px); }
+  .post-card.hidden { display: none; }
   .accent-bar { height: 3px; width: 100%; }
   .card-body { padding: 12px 14px 14px; display: flex; flex-direction: column; flex: 1; }
   .card-cat { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: .07em; text-transform: uppercase; border: 1px solid; padding: 2px 8px; border-radius: 3px; display: inline-block; margin-bottom: 8px; width: fit-content; }
@@ -20,6 +27,9 @@ description: Cybersecurity insights, breach analysis, and practical guides for s
   .card-foot { display: flex; justify-content: space-between; align-items: center; margin-top: auto; }
   .card-date { font-family: 'Space Mono', monospace; font-size: 10px; color: var(--text-secondary); }
   .card-cta { font-family: 'Space Mono', monospace; font-size: 10px; color: var(--cyan); }
+
+  .blog-count { text-align: center; font-family: 'Space Mono', monospace; font-size: 11px; color: var(--text-secondary); margin: 32px 0 0; }
+
   @media(max-width:860px) { .posts-grid { grid-template-columns: 1fr 1fr; } }
   @media(max-width:560px) { .blog-page { padding: 16px 16px 40px; } .posts-grid { grid-template-columns: 1fr; } }
 </style>
@@ -27,16 +37,31 @@ description: Cybersecurity insights, breach analysis, and practical guides for s
 <div class="blog-page">
   <div class="blog-page-header">
     <span class="tag">// CYBERZ BLOG</span>
-    <h1>Threat Intel & Security Guides</h1>
+    <h1>Threat Intel &amp; Security Guides</h1>
     <p>Breach breakdowns, practical advice, and actionable security tips for small business.</p>
   </div>
+
   {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+
   {% if sorted_posts.size == 0 %}
   <p style="text-align:center;font-family:'Space Mono',monospace;font-size:13px;color:var(--cyan);padding:40px 0;">// POSTS INCOMING</p>
   {% else %}
+
+  {%- capture catblob -%}
+    {%- for post in sorted_posts -%}
+      {{- post.category | default: 'GENERAL' | upcase | replace: '-', ' ' -}}|
+    {%- endfor -%}
+  {%- endcapture -%}
+  {% assign cats = catblob | split: '|' | uniq | sort %}
+
+  <div class="cat-filter">
+    <button class="cat-chip active" data-filter="ALL">All ({{ sorted_posts.size }})</button>
+    {% for c in cats %}{% unless c == "" %}<button class="cat-chip" data-filter="{{ c }}">{{ c }}</button>{% endunless %}{% endfor %}
+  </div>
+
   <div class="posts-grid">
-  {% for post in sorted_posts limit:9 %}
-    {% assign cat_up = post.category | upcase %}
+  {% for post in sorted_posts %}
+    {% assign cat_up = post.category | default: 'GENERAL' | upcase | replace: '-', ' ' %}
     {% assign accent = "#00f0ff" %}
     {% if cat_up == "HEALTHCARE" %}{% assign accent = "#00ff88" %}
     {% elsif cat_up == "ACCOUNTING" %}{% assign accent = "#0088ff" %}
@@ -48,19 +73,39 @@ description: Cybersecurity insights, breach analysis, and practical guides for s
     {% elsif cat_up == "CONSTRUCTION" %}{% assign accent = "#00ff88" %}
     {% elsif cat_up == "DEFENSE" %}{% assign accent = "#0088ff" %}
     {% endif %}
-    <a href="{{ post.url }}" class="post-card">
+    <a href="{{ post.url }}" class="post-card" data-cat="{{ cat_up }}">
       <div class="accent-bar" style="background:{{ accent }};"></div>
       <div class="card-body">
-        <span class="card-cat" style="color:{{ accent }};border-color:{{ accent }};">{{ post.category }}</span>
+        <span class="card-cat" style="color:{{ accent }};border-color:{{ accent }};">{{ cat_up }}</span>
         <h3 class="card-title">{{ post.title }}</h3>
         {% if post.description %}<p class="card-desc">{{ post.description }}</p>{% endif %}
         <div class="card-foot">
           <span class="card-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-          <span class="card-cta">Read →</span>
+          <span class="card-cta">Read &rarr;</span>
         </div>
       </div>
     </a>
   {% endfor %}
   </div>
+
+  <p class="blog-count">// {{ sorted_posts.size }} POSTS PUBLISHED</p>
   {% endif %}
 </div>
+
+<script>
+  (function () {
+    var chips = document.querySelectorAll('.cat-chip');
+    var cards = document.querySelectorAll('.post-card');
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        var f = chip.getAttribute('data-filter');
+        chips.forEach(function (c) { c.classList.remove('active'); });
+        chip.classList.add('active');
+        cards.forEach(function (card) {
+          var show = (f === 'ALL') || (card.getAttribute('data-cat') === f);
+          card.classList.toggle('hidden', !show);
+        });
+      });
+    });
+  })();
+</script>
