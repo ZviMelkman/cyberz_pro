@@ -38,6 +38,10 @@
       {{ content }}
     </div>
 
+    {% if page.category %}{% assign cat = page.category | downcase %}{% if cat == "cmmc" %}
+    {% include cmmc-signup.html %}
+    {% endif %}{% endif %}
+
     {% if page.source_name %}
     <div class="post-source">
       <p>Originally reported by {{ page.source_author | default: page.source_name }} for {{ page.source_name }}{% if page.source_date %} on {{ page.source_date }}{% endif %}.</p>
