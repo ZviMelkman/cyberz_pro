@@ -34,6 +34,12 @@
       </div>
     </header>
 
+      {% if page.category %}{% assign cat = page.category | downcase %}{% assign d = page.date | date: "%Y%m%d" | plus: 0 %}{% if cat == "cmmc" and d < 20260713 %}
+    <div style="border:1px solid #2a2a31; border-left:4px solid #EE4C48; border-radius:8px; padding:16px 18px; margin:0 0 28px; font-family:'Rajdhani',sans-serif; font-size:1.05rem; line-height:1.5; color:#c4c4cc;">
+      <strong style="color:#ffffff;">Update, August 26, 2026.</strong> This post was written before July 13, 2026, when the Department of War suspended CMMC Phase 2, including the November 10, 2026 C3PAO assessment milestone, pending a 60-day program review. Phase 1 self-assessments, SPRS score postings, and DFARS 252.204-7012 obligations were not suspended. Any reference below to November 2026 as a live deadline is historical. Current status: <a href="{% post_url 2026-07-19-is-cmmc-still-required %}">Is CMMC still required?</a>
+    </div>
+    {% endif %}{% endif %}
+
     <div class="post-content">
       {{ content }}
     </div>
