@@ -59,7 +59,7 @@ Those six, taken verbatim from 32 CFR 170.21(a)(2)(iii)(A) through (F), are:
 
 There is a logic to the list. These are the requirements that define and protect the CUI boundary itself: what connects to it, what information leaves it, who walks into the rooms where it lives, and the document that describes the whole system. The DoD's position is that if those are not in place, the rest of the assessment is built on sand, regardless of how few points the control is worth.
 
-The System Security Plan exclusion deserves its own line. CA.L2-3.12.4 is not only ineligible for a POA&M, the SSP is a prerequisite for the assessment to proceed at all. An assessor cannot evaluate a system that has no documented description. If your SSP is incomplete, you do not get a low score on that control, you get an assessment that cannot start. It is the single most common blocker we see, and it is the reason the SSP is the first artifact worth getting right. The full walkthrough of what an assessor actually reads in an SSP is in our piece on {% raw %}{% post_url 2026-06-08-what-your-prime-is-actually-accepting-cmmc %}{% endraw %}.
+The System Security Plan exclusion deserves its own line. CA.L2-3.12.4 is not only ineligible for a POA&M, the SSP is a prerequisite for the assessment to proceed at all. An assessor cannot evaluate a system that has no documented description. If your SSP is incomplete, you do not get a low score on that control, you get an assessment that cannot start. It is the single most common blocker we see, and it is the reason the SSP is the first artifact worth getting right. The full walkthrough of what an assessor actually reads in an SSP is in our piece on [what your prime is actually accepting]({% post_url 2026-06-08-what-your-prime-is-actually-accepting-cmmc %}).
 
 ## The one exception worth knowing
 
@@ -75,7 +75,7 @@ If you use the encryption exception, that 3-point deferral eats into the same bu
 
 ![Graphic showing the two numbers that decide a Conditional CMMC cert: a score floor where MET must reach 88 of 110 leaving a 22-point cushion, and a 180-day closeout clock confirmed by a C3PAO after which conditional status expires.](/blog/images/3-cmmc-poam-180-day-margin-timeline.png)
 
-This is also where an accurate SPRS score matters. The number you self-report is a representation to the government, and the gap between a generous self-score and a real one is exactly the kind of misstatement the Department of Justice has pursued under the False Claims Act. We covered how a SPRS score functions as a legal statement, not an IT metric, in {% raw %}{% post_url 2026-06-10-nist-800-171-sprs-score %}{% endraw %}.
+This is also where an accurate SPRS score matters. The number you self-report is a representation to the government, and the gap between a generous self-score and a real one is exactly the kind of misstatement the Department of Justice has pursued under the False Claims Act. We covered how a SPRS score functions as a legal statement, not an IT metric, in [why your SPRS score is a legal statement]({% post_url 2026-06-10-nist-800-171-sprs-score %}).
 
 ## The 180-day clock
 
