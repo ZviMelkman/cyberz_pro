@@ -53,7 +53,7 @@ When your C3PAO shows up, the assessment team examines, interviews, and tests ag
 
 The rule offers providers an off-ramp: 32 CFR 170.19(c)(2) notes an ESP may voluntarily undergo its own CMMC certification assessment to reduce the effort required during the customer's assessment. Some MSPs serving the defense market are doing exactly that, because being re-examined inside every client's assessment does not scale. If your provider has voluntarily certified, your assessment gets simpler. If it has not, plan for your assessor to spend real time on the provider relationship, and plan for your MSP to be available during assessment week.
 
-One prime-facing note: the flow-down letters we covered in [what your prime is actually accepting]({% raw %}{% post_url 2026-06-08-what-your-prime-is-actually-accepting-cmmc %}{% endraw %}) increasingly ask subs how their providers are handled. "Our MSP is dealing with it" is not an answer a prime's supplier risk team accepts anymore.
+One prime-facing note: the flow-down letters we covered in [what your prime is actually accepting]({% post_url 2026-06-08-what-your-prime-is-actually-accepting-cmmc %}) increasingly ask subs how their providers are handled. "Our MSP is dealing with it" is not an answer a prime's supplier risk team accepts anymore.
 
 ## The cloud exception: FedRAMP is non-negotiable
 
