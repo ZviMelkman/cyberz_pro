@@ -32,7 +32,7 @@ That is a fair reading of the mood. It is not a reading of the rules, and the ru
 
 The question underneath both camps is simpler than either wants it to be. The accounting you were preparing to give an assessor in November is still owed. What changed is who you give it to, and whether anyone schedules the appointment.
 
-![Two camps, one rulebook: certified contractors hold a three-year status, paused contractors still owe a SPRS score, and both still affirm annually](/blog/images/2-cmmc-certification-still-valid-two-camps.png)
+![Two camps, same rules: certified contractors hold a three-year status, paused contractors are not off the hook, and both still affirm annually](/blog/images/2-cmmc-certification-still-valid-two-camps.png)
 
 ## What your certificate is still worth
 
@@ -56,7 +56,7 @@ Here is the part the certified camp tends to skip, because the assessment felt l
 
 One more detail for anyone holding a Conditional rather than Final status: the 180-day POA&M closeout window in 32 CFR 170.21 did not pause either. C3PAOs can still perform closeout assessments. If your 180 days run out with the POA&M open, the conditional status expires on its own schedule, suspension or not.
 
-![Three clocks still run: three years on the certificate, one year on the affirmation, six years on hashed artifact retention](/blog/images/3-cmmc-certificate-3-year-clock-annual-affirmation.png)
+![Three clocks still run: three years on the status, one year on the affirmation, six years on hashed artifact retention](/blog/images/3-cmmc-certificate-3-year-clock-annual-affirmation.png)
 
 ## If you paused: what waiting actually requires
 
